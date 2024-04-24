@@ -5,18 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClubXtreme - Admin dashboard</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-5">
-                554
-            </div>
-            <div class="col-7">
-                788
-            </div>
+    <nav class="navbar navbar-light bg-primary fixed-top  ">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="assets/img/logo/white logo.svg" width="185" >
+          </a>
+          <div class="d-flex ">
+              <form class="d-flex align-items-center justify-content-between me-5 ">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </form>
+              <span class="user">
+                <img src="assets/img/logo/review3.jpg" class="w-100 rounded-circle   user__icon" alt="">
+              </span>
+          </div>
         </div>
-    </div>
+      </nav>
+
+      <div class="container-fluid m-0 p-0">
+        <div class="row m-0 p-0">
+          <nav class="col-2 bg-secondary d-flex flex-column vh-100 p-0 ">
+            <ul class="list-unstyled d-flex flex-column  align-items-start p-5 ">
+              <li class="link mb-4 text-start  "><a href="#" class="fs-5 text-dark text-decoration-none ">Tableau de bord</a></li>
+              <li class="link mb-4 text-start  "><a href="#" class="fs-5 text-dark text-decoration-none "><i class="fa-solid fa-users"></i> Membres</a></li>
+              <li class="link mb-4 "><a href="#" class="fs-5 text-dark text-decoration-none "><i class="fa-solid fa-trophy"></i> Tournois</a></li>
+              <li class="link mb-4 "><a href="#" class="fs-5 text-dark text-decoration-none "><i class="fa-solid fa-calendar"></i> Evénements</a></li>
+              <li class="link mb-4"><a href="#" class="fs-5 text-dark text-decoration-none "><i class="fa-solid fa-money-bill-transfer"></i> Transactions</a></li>
+            </ul>
+            <div class="bg-dark mt-auto text-center p-3 ">
+              <a href="#" class=" text-decoration-none  fs-5 text-white  fw-bold" ><i class="fa-solid fa-right-from-bracket"></i> Se deconnecter</a>
+            </div>
+          </nav>
+          <main class="col-9">
+
+          </main>
+        </div>
+      </div>
 </body>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </html>
