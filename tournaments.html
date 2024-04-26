@@ -78,8 +78,16 @@
                 <div class="col-2 fw-light fs-6">
                     terrain 5
                 </div>
-                <div class="col-2  fw-light fs-6 text-center ">
+                <div class="dropdown col-2">
+                  <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-ellipsis fa-xl"></i>
+                  </a>
+                
+                  <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item border p-2 " href="#"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                    <li><a class="dropdown-item border p-2" href="#"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
+                    <li><a class="dropdown-item border p-2" href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                  </ul>
                 </div>
             </div>
 
@@ -87,5 +95,5 @@
     </div>
 </div>
 </body>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </html>
