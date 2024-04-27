@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubXtreme - Admin dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-dark sticky-top  p-2">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="../assets/img/logo/white logo.svg" width="185" >
+          </a>
+          <div class="d-flex ">
+              <form class="d-lg-flex d-none align-items-center justify-content-between me-5 ">
+                <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass text-white"></i>
+              </form>
+              <span class="user">
+                <img src="../assets/img/logo/review3.jpg" class="w-100 rounded-circle   user__icon" alt="">
+              </span>
+          </div>
+        </div>
+</nav>
+      <div class="container-fluid m-0 p-0">
+        <div class="row m-0 p-0 ">
+        <nav class="col-2 bg-secondary d-lg-flex flex-column asideNavbar  p-0 d-none   ">
+            <ul class="list-unstyled d-flex flex-column  align-items-start  p-4  pt-5  ps-5 ">
+              <li class="link mb-4 text-start  "><a href="dashboard.php" class="fs-5 text-dark fw-bold text-decoration-none "><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
+              <li class="link mb-4 text-start  "><a href="members/members.php" class="fs-5 fw-light text-dark text-decoration-none "><i class="fa-solid fa-users"></i> Membres</a></li>
+              <li class="link mb-4 "><a href="tournaments/tournaments.php" class="fs-5 fw-light text-dark text-decoration-none "><i class="fa-solid fa-trophy"></i> Tournois</a></li>
+              <li class="link mb-4 "><a href="events/events.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-calendar"></i> Evénements</a></li>
+              <li class="link mb-4"><a href="transactions/transactions.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-money-bill-transfer"></i> Transactions</a></li>
+              <li class="link mb-4"><a href="trainingsessions/trainingsessions.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-rectangle-list"></i> Séances d'entrainements</a></li>
+              <li class="link mb-4"><a href="reports/reports.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-flag"></i> Rapports</a></li>
+            </ul>
+            <div class="bg-dark mt-auto text-center p-3 ">
+              <a href="#" class=" text-decoration-none  fs-5 text-white  fw-bold" ><i class="fa-solid fa-right-from-bracket"></i> Se deconnecter</a>
+            </div>
+          </nav>
+          <main class="col-lg-9 col-12 m-auto   mt-5">
+            <h1 class="text-dark fs-3 fw-bold ">Tableau de bord</h1>
+            <h2 class=" fw-light fs-5 ">Ce mois</h2>
+            <div class="row mt-4 justify-content-between  p-2 mt-lg-0 ">
+              <div class="col-lg-3 col-md-6 col-12 bg-secondary   p-3 text-center rounded-4 m-2">
+                <h3 class="fs-4 fw-light "><span class="tounrnamentsIcon"><i class="fa-solid fa-trophy"></i></span> Tournois</h3>
+                <h4 class="fs-4 fw-bold ">14</h4>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12  bg-secondary   p-3 text-center rounded-4 mt-lg-0 m-2">
+                <h3 class="fs-4 fw-light "><span class="tounrnamentsIcon"><i class="fa-solid fa-calendar"></i></span> Evénements</h3>
+                <h4 class="fs-4 fw-bold ">33</h4>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12  bg-secondary   p-3 text-center rounded-4 mt-lg-0 m-2">
+                <h3 class="fs-4 fw-light "><span class="tounrnamentsIcon"><i class="fa-solid fa-money-bill-transfer"></i></span> Transactions</h3>
+                <h4 class="fs-4 fw-bold ">20</h4>
+              </div>
+            </div>
+            <h2 class="text-dark fs-4 fw-bold mt-4">Nouveaux abonnés</h2>
+            <h3 class=" fw-light fs-5 ">Découvrez les derniers membres du club</h3>
+            <div class="row mt-4">
+              <div class="col-3 fw-bold">
+                Id
+              </div>
+              <div class="col-3 fw-bold">
+                Nom complet
+              </div>
+              <div class="col-3 fw-bold">
+                Email
+              </div>
+              <div class="col-3 fw-bold">
+                Telephone
+              </div>
+            </div>
+            <hr>
+            <div class="row mt-4 bg-info p-3 rounded ">
+              <div class="col-3 fw-light">
+                54
+              </div>
+              <div class="col-3 fw-light">
+                Oussama Fayz
+              </div>
+              <div class="col-3 fw-light">
+                fayzoussama@gmail.com
+              </div>
+              <div class="col-3 fw-light">
+                +212-97586699
+              </div>
+              
+            </div>
+            <div class="row mt-4 bg-info p-3 rounded ">
+              <div class="col-3 fw-light">
+                54
+              </div>
+              <div class="col-3 fw-light">
+                Oussama Fayz
+              </div>
+              <div class="col-3 fw-light">
+                fayzoussama@gmail.com
+              </div>
+              <div class="col-3 fw-light">
+                +212-97586699
+              </div>
+              
+            </div>
+          </main>
+        </div>
+      </div>
+</body>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</html>
