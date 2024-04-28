@@ -38,7 +38,7 @@
               <li class="link mb-4"><a href="reports/reports.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-flag"></i> Rapports</a></li>
             </ul>
             <div class="bg-dark mt-auto text-center p-3 ">
-              <a href="#" class=" text-decoration-none  fs-5 text-white  fw-bold" ><i class="fa-solid fa-right-from-bracket"></i> Se deconnecter</a>
+              <a href=".." class=" text-decoration-none  fs-5 text-white  fw-bold" ><i class="fa-solid fa-right-from-bracket"></i> Se deconnecter</a>
             </div>
           </nav>
           <main class="col-lg-9 col-12 m-auto   mt-5">

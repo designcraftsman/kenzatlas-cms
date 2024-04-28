@@ -27,7 +27,7 @@
                 <div class="col-3 fw-bold fs-6">
                     Telephone
                 </div>
-                <button class="btn  btn-success  col-2 fw-bold">Ajouter un membre</button>
+                <a type="button" href="add.php" class="btn  btn-success  col-2 fw-bold">Ajouter un membre</a>
                 <hr class="m-2">
             </div>
             
@@ -50,9 +50,9 @@
                   </a>
                 
                   <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item border p-2 " href="#"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
-                    <li><a class="dropdown-item border p-2" href="#"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
-                    <li><a class="dropdown-item border p-2" href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                    <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                    <li><a class="dropdown-item border p-2" href="modify.php"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
+                    <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
                   </ul>
                 </div>
             </div>
@@ -75,9 +75,9 @@
                 </a>
               
                 <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item border p-2 " href="#"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
-                  <li><a class="dropdown-item border p-2" href="#"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
-                  <li><a class="dropdown-item border p-2" href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                  <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                  <li><a class="dropdown-item border p-2" href="modify.php"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
+                  <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
                 </ul>
               </div>
           </div>
@@ -100,12 +100,26 @@
               </a>
             
               <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item border p-2 " href="#"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
-                <li><a class="dropdown-item border p-2" href="#"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
-                <li><a class="dropdown-item border p-2" href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                <li><a class="dropdown-item border p-2" href="modify.php"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
+                <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
               </ul>
             </div>
         </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Voulez vous vraiment supprimez cet événement ?</h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                    <a href="delete.php" type="button" class="btn btn-danger">Supprimer</a>
+                                </div>
+                                </div>
+                 </div>
+            </div>
 
         </main>
     </div>
