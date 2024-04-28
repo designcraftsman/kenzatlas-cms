@@ -30,7 +30,7 @@
                 <div class="col-2  fw-bold fs-6">
                     Lieu
                 </div>
-                <button class="btn  btn-success   col-2 fw-bold">Ajouter un événement</button>
+                <a href="add.php" class="btn  btn-success   col-2 fw-bold">Ajouter un événement</a>
                 <hr class="m-2">
             </div>
             
@@ -71,6 +71,6 @@
             
         </main>
         </div>
- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
