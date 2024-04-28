@@ -14,6 +14,10 @@
         <?php include_once "../components/asidenav.php";?>
         <main class="col-lg-9 col-12     p-5   mt-0">
             <div class=" fs-5 row m-auto mb-3">
+                <div class="fw-bold text-decoration-underline col-3">Id: </div>
+                <div class="col-7">55</div>
+            </div>
+            <div class=" fs-5 row m-auto mb-3">
                 <div class="fw-bold text-decoration-underline col-3">Evénement: </div>
                 <div class="col-7">Yoga class</div>
             </div>
