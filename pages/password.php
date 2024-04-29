@@ -20,7 +20,7 @@
                 <i class="fa-solid fa-magnifying-glass text-white"></i>
               </form>
               <a type="button" href="user.php" class="user">
-                <img src="../assets/img/logo/review3.jpg" class="w-100 rounded-circle   user__icon" alt="">
+                <img src="../../assets/img/logo/review3.jpg" class="w-100 rounded-circle   user__icon" alt="">
               </a>
           </div>
         </div>
@@ -40,70 +40,26 @@
               <a href=".." class=" text-decoration-none  fs-5 text-white  fw-bold" ><i class="fa-solid fa-right-from-bracket"></i> Se deconnecter</a>
             </div>
           </nav>
-          <main class="col-lg-9 col-12 m-auto   mt-5">
-            <h1 class="text-dark fs-3 fw-bold ">Tableau de bord</h1>
-            <h2 class=" fw-light fs-5 ">Ce mois</h2>
-            <div class="row mt-4 justify-content-between  p-2 mt-lg-0 ">
-              <div class="col-lg-3 col-md-6 col-12 bg-secondary   p-3 text-center rounded-4 m-2">
-                <h3 class="fs-4 fw-light "><span class="tounrnamentsIcon"><i class="fa-solid fa-trophy"></i></span> Tournois</h3>
-                <h4 class="fs-4 fw-bold ">14</h4>
-              </div>
-              <div class="col-lg-3 col-md-6 col-12  bg-secondary   p-3 text-center rounded-4 mt-lg-0 m-2">
-                <h3 class="fs-4 fw-light "><span class="tounrnamentsIcon"><i class="fa-solid fa-calendar"></i></span> Evénements</h3>
-                <h4 class="fs-4 fw-bold ">33</h4>
-              </div>
-              <div class="col-lg-3 col-md-6 col-12  bg-secondary   p-3 text-center rounded-4 mt-lg-0 m-2">
-                <h3 class="fs-4 fw-light "><span class="tounrnamentsIcon"><i class="fa-solid fa-money-bill-transfer"></i></span> Transactions</h3>
-                <h4 class="fs-4 fw-bold ">20</h4>
-              </div>
-            </div>
-            <h2 class="text-dark fs-4 fw-bold mt-4">Nouveaux abonnés</h2>
-            <h3 class=" fw-light fs-5 ">Découvrez les derniers membres du club</h3>
-            <div class="row mt-4">
-              <div class="col-3 fw-bold">
-                Id
-              </div>
-              <div class="col-3 fw-bold">
-                Nom complet
-              </div>
-              <div class="col-3 fw-bold">
-                Email
-              </div>
-              <div class="col-3 fw-bold">
-                Telephone
-              </div>
-            </div>
-            <hr>
-            <div class="row mt-4 bg-info p-3 rounded ">
-              <div class="col-3 fw-light">
-                54
-              </div>
-              <div class="col-3 fw-light">
-                Oussama Fayz
-              </div>
-              <div class="col-3 fw-light">
-                fayzoussama@gmail.com
-              </div>
-              <div class="col-3 fw-light">
-                +212-97586699
-              </div>
-              
-            </div>
-            <div class="row mt-4 bg-info p-3 rounded ">
-              <div class="col-3 fw-light">
-                54
-              </div>
-              <div class="col-3 fw-light">
-                Oussama Fayz
-              </div>
-              <div class="col-3 fw-light">
-                fayzoussama@gmail.com
-              </div>
-              <div class="col-3 fw-light">
-                +212-97586699
-              </div>
-              
-            </div>
+          <main class="col-lg-9 col-12 m-auto    mt-5">
+                <form class=" m-auto ">
+                    <div class="row mb-5">
+                        <div class="col">
+                            <label for="lieu" class="mb-3">Ancien mot de passe</label>
+                            <input type="password" name="lieu" class="form-control" value="fayz">
+                        </div>
+                        <div class="col">
+                            <label for="sport" class="mb-3">Nouveau mot de passe</label>
+                            <input type="password" name="lieu" class="form-control"value="oussama" > 
+                        </div>
+                        <div class="col">
+                            <label for="lieu" class="mb-3">Confirmer le nouveau mot de passe</label>
+                            <input type="password" name="lieu" class="form-control"  >
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class=" btn btn-success  fw-bold">Enregistrer</button>
+                </form>
+           
           </main>
         </div>
       </div>
