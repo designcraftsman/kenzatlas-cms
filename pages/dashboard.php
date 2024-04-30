@@ -19,9 +19,22 @@
                 <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
                 <i class="fa-solid fa-magnifying-glass text-white"></i>
               </form>
-              <a type="button" href="user.php" class="user">
+              <a type="button"  data-bs-toggle="collapse" href="#userCollapse" role="button" aria-expanded="false" aria-controls="collapseExample" class="user">
                 <img src="../assets/img/logo/review3.jpg" class="w-100 rounded-circle   user__icon" alt="">
               </a>
+              <div class="collapse" id="userCollapse">
+              <div class="card card-body p-0">
+                <h2 class="fw-normal p-3 fs-5">Bonjour,<span>Oussama Fayz</span> !</h2>
+                <hr class="m-1">
+                <nav class="p-0">
+                    <ul class="list-unstyled m-0 p-0">
+                      <li  class=" border-dark m-0 p-0 rounded-top "><a class="text-decoration-none text-dark d-block p-3" href="user/manage.php"><i class="fa-solid fa-user"></i> Gérer votre compte</a></li>
+                      <hr class="m-1">
+                      <li class="  m-0 p-0 rounded-bottom"><a class="text-decoration-none text-dark d-block p-3 " href=".."><i class="fa-solid fa-right-from-bracket"></i> Se déconnecter</a></li>
+                    </ul>
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
 </nav>
@@ -36,10 +49,7 @@
               <li class="link mb-4"><a href="trainingsessions/trainingsessions.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-rectangle-list"></i> Séances d'entrainements</a></li>
               <li class="link mb-4"><a href="reports/reports.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-flag"></i> Rapports</a></li>
             </ul>
-            <div class="bg-dark mt-auto text-center p-3 ">
-              <a href=".." class=" text-decoration-none  fs-5 text-white  fw-bold" ><i class="fa-solid fa-right-from-bracket"></i> Se deconnecter</a>
-            </div>
-          </nav>
+        </nav>
           <main class="col-lg-9 col-12 m-auto   mt-5">
             <h1 class="text-dark fs-3 fw-bold ">Tableau de bord</h1>
             <h2 class=" fw-light fs-5 ">Ce mois</h2>
