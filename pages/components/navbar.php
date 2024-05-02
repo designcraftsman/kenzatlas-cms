@@ -1,7 +1,10 @@
 <nav class="navbar navbar-light bg-dark sticky-top  p-2 position-relative ">
         <div class="container-fluid">
-          <a  class="navbar-brand">
-            <img src="../../assets/img/logo/white logo.svg" width="185" >
+          <a class="text-decoration-none d-lg-none " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <a  class="navbar-brand" href="../dashboard.php">
+            <img src="../../assets/img/logo/white logo.svg" width="150" >
           </a>
           <div class="d-flex ">
               <form class="d-lg-flex d-none align-items-center justify-content-between me-5 ">
@@ -29,3 +32,23 @@
 
 </nav>
 
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h2 class="fw-semibold">
+      ClubXtreme
+    </h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body mt-5 p-0">
+    <nav class="p-0">
+        <ul class="list-unstyled text-center p-0">
+          <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
+          <li class="link p-0 "><a href="../members/members.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Membres</a></li>
+          <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Evénements</a></li>
+          <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Transactions</a></li>
+          <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Séances d'entrainements</a></li>
+          <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Rapports</a></li>
+        </ul>
+    </nav>
+  </div>
+</div>

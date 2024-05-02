@@ -11,8 +11,11 @@
 
 <nav class="navbar navbar-light bg-dark sticky-top  p-2">
         <div class="container-fluid">
-          <a class="navbar-brand">
-            <img src="../assets/img/logo/white logo.svg" width="185" >
+          <a class="text-decoration-none d-lg-none " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <a class="navbar-brand" href="dashboard.php">
+            <img src="../assets/img/logo/white logo.svg" width="150" >
           </a>
           <div class="d-flex ">
               <form class="d-lg-flex d-none align-items-center justify-content-between me-5 ">
