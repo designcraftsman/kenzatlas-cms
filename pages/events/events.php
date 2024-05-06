@@ -14,6 +14,45 @@
         <?php include_once "../components/asidenav.php";?>
         <main class="col-lg-9 col-12 m-auto   mt-0">
             <h1 class="fw-bold text-center fs-2 p-3 m-5">Evénements</h1>
+
+
+            <div class="table-responsive">
+                <table class="table table-primary   mt-4">
+                  <thead>
+                    <tr  >
+                      <th scope="col" class="col-2">Id</th>
+                      <th scope="col" class="col-2">Nom</th>
+                      <th scope="col" class="col-2">Date</th>
+                      <th scope="col" class="col-2">Heure</th>
+                      <th scope="col" class="col-2">Lieu</th>
+                      <th scope="col" class="col"><a href="add.php" class="btn  btn-success    fw-bold">Ajouter un événement</a></th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto@gmail.com</td>
+                      <td>06973655</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton@gmail.com</td>
+                      <td>0788996632</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry the Bird</td>
+                      <td>larry@gmail.com</td>
+                      <td>89665577</td>
+                    </tr>
+                  </tbody>
+                </table>
+        </div>
+
+
             <div class="row  align-items-center ">
                 <div class="col-2 fw-bold fs-6">
                     Id

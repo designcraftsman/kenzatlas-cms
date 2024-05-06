@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-dark sticky-top  p-2 position-relative ">
         <div class="container-fluid">
           <a class="text-decoration-none d-lg-none " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars fa-lg"></i>
           </a>
           <a  class="navbar-brand" href="../dashboard.php">
             <img src="../../assets/img/logo/white logo.svg" width="150" >
@@ -43,11 +43,11 @@
     <nav class="p-0">
         <ul class="list-unstyled text-center p-0">
           <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
-          <li class="link p-0 "><a href="../members/members.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Membres</a></li>
-          <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Evénements</a></li>
-          <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Transactions</a></li>
-          <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Séances d'entrainements</a></li>
-          <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Rapports</a></li>
+          <li class="link p-0 "><a href="../members/members.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-users"></i> Membres</a></li>
+          <li class="link  p-0 "><a href="../events/events.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-calendar"></i> Evénements</a></li>
+          <li class="link  p-0 "><a href="../transactions/transactions.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-money-bill-transfer"></i> Transactions</a></li>
+          <li class="link  p-0 "><a href="../trainingsessions/trainingsessions.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-rectangle-list"></i> Séances d'entrainements</a></li>
+          <li class="link  p-0 "><a href="../reports/reports.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-flag"></i> Rapports</a></li>
         </ul>
     </nav>
   </div>
