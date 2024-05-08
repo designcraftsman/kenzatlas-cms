@@ -25,7 +25,7 @@
                       <th scope="col" class="col-2">Date</th>
                       <th scope="col" class="col-2">Heure</th>
                       <th scope="col" class="col-2">Lieu</th>
-                      <th scope="col" class="col"><a href="add.php" class="btn  btn-success    fw-bold">Ajouter un événement</a></th>
+                      <th scope="col" class="col"><a href="add.php" class="btn  btn-success  fw-bold">Ajouter un événement</a></th>
                       
                     </tr>
                   </thead>
@@ -35,72 +35,106 @@
                       <td>Mark</td>
                       <td>Otto@gmail.com</td>
                       <td>06973655</td>
+                      <td>casablanca</td>
+                      <td>
+                        <div class="dropdown col-2">
+                          <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis fa-xl"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                            <li><a class="dropdown-item border p-2" href="modify.php"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
+                            <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton@gmail.com</td>
-                      <td>0788996632</td>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto@gmail.com</td>
+                      <td>06973655</td>
+                      <td>casablanca</td>
+                      <td>
+                        <div class="dropdown col-2">
+                          <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis fa-xl"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                            <li><a class="dropdown-item border p-2" href="modify.php"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
+                            <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
-                      <th scope="row">3</th>
-                      <td>Larry the Bird</td>
-                      <td>larry@gmail.com</td>
-                      <td>89665577</td>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto@gmail.com</td>
+                      <td>06973655</td>
+                      <td>casablanca</td>
+                      <td>
+                        <div class="dropdown col-2">
+                          <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis fa-xl"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                            <li><a class="dropdown-item border p-2" href="modify.php"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
+                            <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto@gmail.com</td>
+                      <td>06973655</td>
+                      <td>casablanca</td>
+                      <td>
+                        <div class="dropdown col-2">
+                          <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis fa-xl"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                            <li><a class="dropdown-item border p-2" href="modify.php"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
+                            <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto@gmail.com</td>
+                      <td>06973655</td>
+                      <td>casablanca</td>
+                      <td>
+                        <div class="dropdown col-2">
+                          <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis fa-xl"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                            <li><a class="dropdown-item border p-2" href="modify.php"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
+                            <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
         </div>
 
 
-            <div class="row  align-items-center ">
-                <div class="col-2 fw-bold fs-6">
-                    Id
-                </div>
-                <div class="col-2 fw-bold fs-6">
-                    Nom
-                </div>
-                <div class="col-2 fw-bold fs-6">
-                    Date
-                </div>
-                <div class="col-2 fw-bold fs-6">
-                    Heure
-                </div>
-                <div class="col-2  fw-bold fs-6">
-                    Lieu
-                </div>
-                <a href="add.php" class="btn  btn-success   col-2 fw-bold">Ajouter un événement</a>
-                <hr class="m-2">
-            </div>
-            
-            <div class="row  align-items-center mt-4 bg-info p-3 rounded-4 ">
-                <div class="col-2 fw-light fs-6">
-                    44
-                </div>
-                <div class="col-2 fw-light fs-6">
-                    Yoga class
-                </div>
-                <div class="col-2 fw-light fs-6">
-                    01 Fevirer 2024
-                </div>
-                <div class="col-2 fw-light fs-6">
-                    13:00 GMT
-                </div>
-                <div class="col-2  fw-light fs-6">
-                    Salle de yoga
-                </div>
-                <div class="dropdown col-2">
-                    <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa-solid fa-ellipsis fa-xl"></i>
-                    </a>
-                  
-                    <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
-                      <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
-                      <li><a class="dropdown-item border p-2" href="modify.php"><i class="fa-solid fa-pencil"></i> Modifier</a></li>
-                      <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
-                    </ul>
-                  </div>
-            </div>
 
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
