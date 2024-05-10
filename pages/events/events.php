@@ -13,10 +13,10 @@
         <div class="row m-0 p-0">
         <?php include_once "../components/asidenav.php";?>
         <main class="col-lg-9 col-12 m-auto   mt-0">
-            <h1 class="fw-bold text-center fs-2 p-3 m-5">Evénements</h1>
+            <h1 class="fw-bold text-center fs-2 p-3 m-5 headersAnimation">Evénements</h1>
 
 
-            <div class="table-responsive">
+            <div class="table-responsive componentsAnimation">
                 <table class="table table-primary   mt-4">
                   <thead>
                     <tr  >

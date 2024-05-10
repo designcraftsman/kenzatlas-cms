@@ -1,7 +1,8 @@
 
 
-
-@import "components/navbar.scss";
 @import "override/variables.scss";
+@import "components/navbar.scss";
+@import "components/asidenav.scss";
 @import "pages/user.scss";
+@import "pages/dashboard.scss";
 @import "../node_modules/bootstrap/scss/bootstrap";

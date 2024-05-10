@@ -71,19 +71,19 @@
       <div class="container-fluid m-0 p-0">
         <div class="row m-0 p-0 ">
         <nav class="col-2 bg-secondary d-lg-flex flex-column asideNavbar  p-0 d-none   ">
-            <ul class="list-unstyled d-flex flex-column  align-items-start  p-4  pt-5  ps-5 ">
-              <li class="link mb-4 text-start  "><a href="dashboard.php" class="fs-5 text-dark fw-bold text-decoration-none "><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
-              <li class="link mb-4 text-start  "><a href="members/members.php" class="fs-5 fw-light text-dark text-decoration-none "><i class="fa-solid fa-users"></i> Membres</a></li>
-              <li class="link mb-4 "><a href="events/events.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-calendar"></i> Evénements</a></li>
-              <li class="link mb-4"><a href="transactions/transactions.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-money-bill-transfer"></i> Transactions</a></li>
-              <li class="link mb-4"><a href="trainingsessions/trainingsessions.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-rectangle-list"></i> Séances d'entrainements</a></li>
-              <li class="link mb-4"><a href="reports/reports.php" class="fs-5 text-dark fw-light text-decoration-none "><i class="fa-solid fa-flag"></i> Rapports</a></li>
+            <ul class="list-unstyled d-flex flex-column   p-0 pt-5 asideNavbarAnimation">
+              <li class="link mb-3 "><a href="dashboard.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
+              <li class="link mb-3 "><a href="members/members.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-users"></i> Membres</a></li>
+              <li class="link mb-3  "><a href="events/events.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-calendar"></i> Evénements</a></li>
+              <li class="link mb-3 "><a href="transactions/transactions.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5"><i class="fa-solid fa-money-bill-transfer"></i> Transactions</a></li>
+              <li class="link mb-3 "><a href="trainingsessions/trainingsessions.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5"><i class="fa-solid fa-rectangle-list"></i> Séances d'entrainements</a></li>
+              <li class="link mb-3"><a href="reports/reports.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-flag"></i> Rapports</a></li>
             </ul>
         </nav>
-          <main class="col-lg-9 col-12 m-auto   mt-5">
-            <h1 class="text-dark fs-3 fw-bold ">Tableau de bord</h1>
-            <h2 class=" fw-light fs-5 ">Ce mois</h2>
-            <div class="row mt-4   p-2 mt-lg-0 ">
+          <main class="col-lg-9 col-12 m-auto   mt-5 ">
+            <h1 class="text-dark fs-3 fw-bold headersAnimation">Tableau de bord</h1>
+            <h2 class=" fw-light fs-5 headersAnimation">Ce mois</h2>
+            <div class="row mt-4   p-2 mt-lg-0 componentsAnimation">
               <div class="col-lg-3 col-md-5 col-12 bg-secondary   p-3 text-center rounded-4 m-auto mb-3">
                 <h3 class="fs-4 fw-light "><span class="tounrnamentsIcon"><i class="fa-solid fa-trophy"></i></span> Tournois</h3>
                 <h4 class="fs-4 fw-bold ">14</h4>
@@ -97,10 +97,10 @@
                 <h4 class="fs-4 fw-bold ">20</h4>
               </div>
             </div>
-            <h2 class="text-dark fs-4 fw-bold mt-4">Nouveaux abonnés</h2>
-            <h3 class=" fw-light fs-5 ">Découvrez les derniers membres du club</h3>
+            <h2 class="text-dark fs-4 fw-bold mt-4 secondHeadersAnimation">Nouveaux abonnés</h2>
+            <h3 class=" fw-light fs-5  secondHeadersAnimation">Découvrez les derniers membres du club</h3>
 
-            <div class="table-responsive">
+            <div class="table-responsive secondComponentsAnimation">
                 <table class="table table-primary   mt-4">
                   <thead>
                     <tr >

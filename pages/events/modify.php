@@ -15,24 +15,24 @@
         <main class="col-lg-9 col-12 m-auto   mt-5 ">
         <form class="p-3 ">
             <div class="row mb-3">
-                <div class="col">
+                <div class="col-lg-4 col-md-4 col-12 mb-3">
                     <label for="nom" class="mb-3">Nom d'événement</label>
-                    <input type="text" class="form-control"  value="exemple">
+                    <input type="text" class="form-control"  >
                 </div>
-                <div class="col">
+                <div class="col-lg-4 col-md-4 col-12 mb-3">
                     <label for="nom" class="mb-3">Date</label>
-                    <input type="date" class="form-control"   >
+                    <input type="date" class="form-control"  >
                     
                 </div>
-                <div class="col">
+                <div class="col-lg-4 col-md-4 col-12 mb-3">
                     <label for="lieu" class="mb-3">Lieu</label>
-                    <input type="text" name="lieu" class="form-control" value="exemple" >
+                    <input type="text" name="lieu" class="form-control"  >
                 </div>
             </div>
             <div class="row mb-5">
                 <div class="col">
                     <label for="description" class="mb-3">Description</label>
-                    <textarea name="description" col="3" row="10" class="form-control">exemple  </textarea>
+                    <textarea name="description" col="3" row="10" class="form-control"  ></textarea>
                 </div>
             </div>
             <button type="submit" class=" btn btn-success  fw-bold">Enregistrer les modifications</button>

@@ -14,11 +14,113 @@
   right: 1%;
 }
 
+.asideNavLinks {
+  font-weight: normal;
+  transform: scale(1);
+  transition: all 300ms ease-in-out;
+}
+.asideNavLinks i {
+  transform: rotate(0deg);
+  transition: all 300ms ease-in-out;
+}
+.asideNavLinks:hover {
+  background-color: #F2C040;
+  font-weight: bold;
+  transform: scale(1.03);
+}
+.asideNavLinks:hover a {
+  color: white;
+}
+.asideNavLinks:hover i {
+  transform: rotate(360deg);
+}
+
 .userInfo img {
   width: 150px;
   height: 150px;
 }
 
+.asideNavbarAnimation {
+  animation: asideNavbar 300ms ease-in-out;
+}
+
+@keyframes asideNavbar {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.headersAnimation {
+  animation: headers 300ms ease-in-out;
+}
+
+.componentsAnimation {
+  animation: components 600ms ease-in-out;
+}
+
+.secondHeadersAnimation {
+  animation-name: secondHeaders;
+  animation-duration: 1200ms;
+}
+
+.secondComponentsAnimation {
+  /* Delay the start of the animation */
+  animation-name: secondComponents;
+  animation-duration: 1600ms;
+}
+
+@keyframes headers {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes components {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes secondHeaders {
+  0% {
+    transform: translateY(900px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(900px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes secondComponents {
+  0% {
+    transform: translateY(900px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(900px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
