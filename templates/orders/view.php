@@ -16,60 +16,60 @@
             <h1 class="fw-bolder fs-2 mb-5 text-decoration-underline">Info commande :</h1>
             <div class=" fs-5 row m-auto  border border-primary p-2 rounded   mb-3">
                 <div class="fw-bold text-decoration-underline col-4">Numéro de commande: </div>
-                <div class="col-7 text-end">55</div>
+                <div class="col-7 text-end"><?= htmlspecialchars($commande['numero']); ?></div>
             </div>
             <div class=" fs-5 row m-auto border  border-primary p-2 rounded mb-3">
                 <div class="fw-bold text-decoration-underline col-4">Client: </div>
-                <div class="col-7 text-end">Saad Smayka</div>
+                <div class="col-7 text-end"><?= htmlspecialchars($commande['nom']); ?> <?= htmlspecialchars($commande['prenom']); ?></div>
             </div>
             <div class="fs-5 row m-auto m-auto border border-primary rounded p-2 mb-3">
                 <div class=" text-decoration-underline fw-bold col-4">Date: </div>
-                <div class="col-7 text-end">21/07/2024   </div>
+                <div class="col-7 text-end"><?= htmlspecialchars($commande['date']); ?></div>
             </div>
-            <div class="fs-5 row m-auto  border border-primary rounded p-2 mb-3">
-                <div class=" col-4 text-decoration-underline fw-bold">Heure: </div>
-                <div class="col-7 text-end"> 21:00 GMT</div>
-            </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Adresse: </div>
                 <div class="col-7 text-end">
-                panorama azhar imm J app 110
+                <?= htmlspecialchars($commande['adresse']); ?>
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Ville: </div>
                 <div class="col-7 text-end">
-                Casablanca
+                <?= htmlspecialchars($commande['ville']); ?>
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Code postal: </div>
                 <div class="col-7 text-end">
-                20600
+                <?= htmlspecialchars($commande['codePostal']); ?>
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Téléphone: </div>
                 <div class="col-7 text-end">
-                0652976002
+                <?= htmlspecialchars($commande['telephone']); ?>
                 </div>
             </div>  
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Note (Commande): </div>
                 <div class="col-7 text-end">
-                Aucune
+                <?= htmlspecialchars($commande['noteCommande']); ?>
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Produit(s) commandé(s): </div>
                 <div class="col-7 text-end">
-                <span >The royal (X2) <br> Huile Précieuse (X1)</span>
+                <?php foreach($produitscommandés as $produit){ ?>
+                <span ><?= htmlspecialchars($produit['produit']); ?> (X <?= htmlspecialchars($produit['quantite']); ?> ) <br></span>
+                <?php } ?>
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Prix total: </div>
                 <div class="col-7 text-end">
-                220 DH
+                <?php 
+                    echo $prixTotal;
+                ?> DH
                 </div>
             </div>
             <div >
