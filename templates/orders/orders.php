@@ -32,11 +32,8 @@
                     <tr>
                       <th scope="row"><?= htmlspecialchars($commande['numero']); ?></th>
                       <td><?php echo($commande['nom'].' '.$commande['prenom']) ?></td>
-                      <?php
-                        $produitscommandés = getOrderDetailsByNumber($commande['numero']);
-                        $prixTotal = getTotalPrice($produitscommandés);
-                      ?>
-                      <td><?= htmlspecialchars ($prixTotal); ?> dh</td>
+            
+                      <td><?= htmlspecialchars ($commande['prix']); ?> dh</td>
                       <td><?= htmlspecialchars($commande['telephone']); ?></td>
                       <td><?= htmlspecialchars($commande['date']); ?></td>
                       <td>

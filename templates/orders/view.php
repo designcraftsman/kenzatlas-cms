@@ -68,7 +68,7 @@
                 <div class=" col-4 text-decoration-underline fw-bold">Prix total: </div>
                 <div class="col-7 text-end">
                 <?php 
-                    echo $prixTotal;
+                    echo $commande['prix'];
                 ?> DH
                 </div>
             </div>

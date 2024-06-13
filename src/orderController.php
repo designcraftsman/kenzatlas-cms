@@ -16,6 +16,7 @@
         	'nom' => $row['nomClient'],
 			'prenom'=>$row['prenomClient'],
         	'telephone' => $row['telephoneClient'],
+			'prix'=> $row['totalCommande'],
             'date'=>$row['dateCommande'],
     	];
 
@@ -53,6 +54,7 @@
 					'ville'=>$row['villeClient'],
 					'noteCommande'=> $row['noteCommandeClient'],
 					'statut'=> $row['statutCommande'],
+					'prix'=> $row['totalCommande'],
 				];
 				
 	
@@ -90,44 +92,10 @@
 			
 	}
 
-	function getOrderDetailsByNumber($numero){
-		try {
-			$database = new PDO('mysql:host=localhost;dbname=kenzltry_kenzatlas;charset=utf8', 'kenzltry_mariamFayz', 'kenzatlas2024');
-		} catch(Exception $e) {
-			die('Erreur : '.$e->getMessage());
-		}
-			$statement = $database->query(
-				"SELECT * FROM produitscommandés  WHERE numeroCommande = $numero"
-			);
-			$produitscommandés = [];
-			while (($row = $statement->fetch())) {
-				$statement = $database->query(
-					"SELECT * FROM produit  WHERE idProduit = $row[idProduit]"
-				);
-				$produit = $statement->fetch();
-				$produitcommandé = [
-					'numero'=> $row['numeroCommande'],
-					'produit' => $produit['nomProduit'],
-					'prix'=>$produit['prixProduit'],
-					'quantite'=>$row['quantiteCommandés'],
-					'prixTotal'=> ((float)$produit['prixProduit'] * (int)$row['quantiteCommandés'])  
-				];
-				$produitscommandés[] = $produitcommandé;
-			}
-		return $produitscommandés;	
-			
-	}
+	
 
 	
 
-	function getTotalPrice($produits){
-		foreach($produits as $produit){
-			$prixTotal = 0;
-			$prix = $produit['prix'] * $produit['quantite'];
-			$prixTotal += $prix;
-		}
-		return $prixTotal;
-	}
 
 
 
