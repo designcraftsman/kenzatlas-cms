@@ -55,7 +55,7 @@
     <nav class="p-0">
         <ul class="list-unstyled text-center p-0">
           <li class="link  p-0 "><a href="dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
-          <li class="link p-0 "><a href="orders/orders.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-users"></i> Membres</a></li>
+          <li class="link p-0 "><a href="orders/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-users"></i> Membres</a></li>
           <li class="link  p-0 "><a href="users/users.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-calendar"></i> Evénements</a></li>
           <li class="link  p-0 "><a href="products/products.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-money-bill-transfer"></i> Transactions</a></li>
           <li class="link  p-0 "><a href="articles/articles.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-rectangle-list"></i> Séances d'entrainements</a></li>
@@ -72,7 +72,7 @@
         <nav class="col-2 bg-secondary d-lg-flex flex-column asideNavbar  p-0 d-none   ">
             <ul class="list-unstyled d-flex flex-column   p-0 pt-5 asideNavbarAnimation">
               <li class="link mb-3 "><a href="dashboard.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
-              <li class="link mb-3 "><a href="orders/orders.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-users"></i> Commandes</a></li>
+              <li class="link mb-3 "><a href="orders/index.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-users"></i> Commandes</a></li>
               <li class="link mb-3  "><a href="users/users.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-calendar"></i> Utulisateurs</a></li>
               <li class="link mb-3 "><a href="products/products.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5"><i class="fa-solid fa-money-bill-transfer"></i> Produits</a></li>
               <li class="link mb-3 "><a href="articles/articles.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5"><i class="fa-solid fa-rectangle-list"></i> Articles</a></li>

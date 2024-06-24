@@ -1,1 +1,1 @@
-<?php require 'templates/login.php'; ?>
+<?php require 'views/login.php';
