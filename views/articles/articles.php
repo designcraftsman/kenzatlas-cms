@@ -6,7 +6,8 @@
     <title>ClubXtreme - Admin dashboard</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
 <body>
 <?php include_once "../components/navbar.php";?>
       <div class="container-fluid m-0 p-0 ">
@@ -25,7 +26,7 @@
                       <th scope="col" class="col-2">Nombre de vue </th>
                       
                       <th class="col-2">
-                        <a href="add.php" class="btn btn-primary w-100 text-white fw-bold">Ajouter un article</a>
+                        <a href="index.php?action=add" class="btn btn-primary w-100 text-white fw-bold">Ajouter un article</a>
                       </th>
                     </tr>
                   </thead>
@@ -34,10 +35,10 @@
                     foreach($articles as $article){ 
                       ?>
                     <tr>
-                      <td scope="row"><img src="../../<?= htmlspecialchars($article['image']); ?>" class="w-25"></td>
-                      <td><?= htmlspecialchars($article['titre']); ?></td>
-                      <td><?= htmlspecialchars($article['date']); ?>/td>
-                      <td><?= htmlspecialchars($article['vue']); ?></td>
+                      <td scope="row"><img src="../../<?= htmlspecialchars($article->image); ?>" class="w-25"></td>
+                      <td><?= htmlspecialchars($article->titre); ?></td>
+                      <td><?= htmlspecialchars($article->date); ?></td>
+                      <td><?= htmlspecialchars($article->vue); ?></td>
                      
                       <td>
                         <div class="dropdown col-2 ">
@@ -46,8 +47,8 @@
                           </a>
                         
                           <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item border p-2 " href="view.php?idArticle=<?= htmlspecialchars($article['id']); ?>"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
-                            <li><a class="dropdown-item border p-2 " href="modify.php?idArticle=<?= htmlspecialchars($article['id']); ?>"><i class="fa-solid fa-pen"></i> Modifier</a></li>
+                            <li><a class="dropdown-item border p-2 " href="index.php?action=view&id=<?= htmlspecialchars($article->id); ?>"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                            <li><a class="dropdown-item border p-2 " href="index.php?action=modify&id=<?= htmlspecialchars($article->id); ?>"><i class="fa-solid fa-pen"></i> Modifier</a></li>
                             <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
                           </ul>
                         </div>
@@ -74,7 +75,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <a href="delete.php?idArticle=<?= htmlspecialchars($article['id']); ?>" type="button" class="btn btn-danger">Supprimer</a>
+                                    <a href="index.php?action=delete&id=<?= htmlspecialchars($article['id']); ?>" type="button" class="btn btn-danger">Supprimer</a>
                                 </div>
                                 </div>
                  </div>
@@ -82,6 +83,7 @@
         </main>
     </div>
 </div>
+
 </body>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>

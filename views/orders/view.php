@@ -1,5 +1,5 @@
-<?php $title ="Commande";?>
-<?php ob_start();?>
+<?php $title = 'Commande'; ?>
+<?php $content = ob_start(); ?>
 <?php include_once "../components/navbar.php";?>
       <div class="container-fluid m-0 p-0 ">
         <div class="row m-0 p-0">
@@ -58,7 +58,10 @@
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Prix total: </div>
-                    <?= htmlspecialchars($produit->prix); ?>DH
+                <div class="col-7 text-end">
+                
+                    <?= htmlspecialchars($commande->prix) ?>
+                 DH
                 </div>
             </div>
             <div >
@@ -78,7 +81,7 @@
                              </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                 <a href="index.php?action=delete&numero-commande=<?= htmlspecialchars($commande['numero']); ?>" type="button" class="btn btn-danger">Supprimer</a>
+                                 <a href="index.php?action=delete&numero-commande=<?= htmlspecialchars($commande->numero); ?>" type="button" class="btn btn-danger">Supprimer</a>
                             </div>
                          </div>
                  </div>
@@ -97,5 +100,7 @@
                  </div>
             </div>
         </div>
- <?php $content = ob_get_clean(); ?>
- <?php require('../../views/layout.php'); ?>
+<?php
+    $content = ob_get_clean(); 
+    require'../../views/layout.php';
+;?>

@@ -13,44 +13,32 @@
         <div class="row m-0 p-0">
         <?php include_once "../components/asidenav.php";?>
         <main class="col-lg-9 col-12 m-auto   mt-5 ">
-        <form class="p-3 ">
+        <form class="p-3 " method="POST"  enctype="multipart/form-data">
             <div class="row mb-5 align-items-center ">
                 <div class="col text-center ">
                     <img src="../../../assets/img/produits/ghassoul.jpg" class="w-50 rounded-5 " alt="">
+                    <input type="file" name="imgArticle">
                 </div>
                 <div class="col">
                     <label for="coach" class="mb-3">Titre d'article</label>
-                    <input type="text" name="coach" class="form-control mb-3"  >
+                    <input type="text" name="titreArticle" class="form-control mb-3"  >
                     <label for="sport" class="mb-3">Catégorie</label>
-                    <select class="form-select m-0" aria-label="sport">
-                        <option selected value="0">Beauté</option>
-                        <option value="1">Corps</option>
-                        <option value="2">Cheveux</option>
-                        <option value="3">Conseils</option>
+                    <select class="form-select m-0" name="categorieArticle" aria-label="sport">
+                        <option selected value="beauté">Beauté</option>
+                        <option value="corps">Corps</option>
+                        <option value="cheveux">Cheveux</option>
+                        <option value="conseil">Conseils</option>
 
                     </select>  
                 </div>
             </div>
             <div class="col  mb-3">
                 <label for="contenu" class="mb-3">Contenu</label>
-                <textarea name="contenu" class="w-100  form-control" rows="10" ></textarea>
+                <textarea name="contenuArticle" class="w-100  form-control" rows="10" ></textarea>
             </div>
-            <a type="button" class="btn btn-primary  p-2 text-white fw-bold"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-pen"></i> Ajouter l'article</a>
+            <button type="submit" class="btn btn-primary  p-2 text-white fw-bold" ><i class="fa-solid fa-pen"></i> Ajouter l'article</button>
          </form>
         </main>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Voulez vous effectuer cette modification ?</h5>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <a href="#" type="button" class="btn btn-danger">Enregistrer</a>
-                                </div>
-                                </div>
-                 </div>
-            </div>
         </div>
  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
