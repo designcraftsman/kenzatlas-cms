@@ -49,6 +49,12 @@
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
+                <div class=" col-4 text-decoration-underline fw-bold">Statut: </div>
+                <div class="col-7 text-end">
+                <?= htmlspecialchars($commande->statut); ?>
+                </div>
+            </div> 
+            <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Produit(s) commandé(s): </div>
                 <div class="col-7 text-end">
                 <?php foreach($produits as $produit){ ?>
@@ -94,7 +100,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <a href="#" type="button" class="btn btn-primary text-white">Confirmer</a>
+                                    <a href="index.php?action=confirm&numero-commande=<?= htmlspecialchars($commande->numero) ?>" type="button" class="btn btn-primary text-white">Confirmer</a>
                                 </div>
                                 </div>
                  </div>

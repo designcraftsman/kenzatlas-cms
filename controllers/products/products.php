@@ -2,7 +2,9 @@
 
 require ('../../models/productsController.php') ;
 
-$produits = getProducts();
-
- require ('../../views/products/products.php');
-
+function products(){
+    $productRepository = new ProductRepository();
+    $productRepository->connection = new DatabaseConnection();
+    $produits = $productRepository->getProducts();
+    require ('../../views/products/products.php');
+}

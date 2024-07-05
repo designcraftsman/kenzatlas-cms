@@ -32,11 +32,11 @@
                   <tbody>
                   <?php foreach($utulisateurs as $utulisateur){ ?>
                     <tr>
-                      <th scope="row"><?= htmlspecialchars($utulisateur['id']); ?></th>
-                      <td><?= htmlspecialchars($utulisateur['email']); ?></td>
-                      <td><?= htmlspecialchars($utulisateur['dateNaissance']); ?></td>
-                      <td><?= htmlspecialchars($utulisateur['telephone']); ?></td>
-                      <td><?= htmlspecialchars($utulisateur['id']); ?></td>
+                      <td scope="row"><?= htmlspecialchars($utulisateur->nom); ?> <?= htmlspecialchars($utulisateur->prenom); ?></td>
+                      <td><?= htmlspecialchars($utulisateur->email); ?></td>
+                      <td><?= htmlspecialchars($utulisateur->dateNaissance); ?></td>
+                      <td><?= htmlspecialchars($utulisateur->telephone); ?></td>
+                      <td><?php echo($OrderRepository->getOrdersNumber($utulisateur->id)) ?></td>
                       <td>
                         <div class="dropdown col-2">
                           <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,9 +44,7 @@
                           </a>
                         
                           <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
-                            
-                            <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                            <li><a class="dropdown-item border p-2 " href="index.php?action=view&id=<?= htmlspecialchars($utulisateur->id); ?>"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
                           </ul>
                         </div>
                       </td>
@@ -59,30 +57,7 @@
                 echo('<div class="text-center text-dark fw-light fs-3  m-0 p-4">Aucun utulisateur</div>');
                 }
                 ?>
-        </div>
-
-
-
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Voulez vous vraiment supprimez ce membre ?</h5>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <a href="delete.php" type="button" class="btn btn-danger">Supprimer</a>
-                                </div>
-                                </div>
-                 </div>
-            </div>
-            
-
-            
-            
-            
-            
+        </div>  
         </main>
         </div>
  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

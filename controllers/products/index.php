@@ -1,31 +1,33 @@
 <?php 
 session_start();
-require_once('../../lib/database.php');
-require_once('orders.php');
+require_once('products.php');
+require_once('add.php');
+require_once('modify.php');
 require_once('delete.php');
 require_once('view.php');
-require_once('confirm.php');
 
 try{
     if(isset($_GET['action']) && $_GET['action'] !== ""){
         if($_GET['action']=='view'){
-            if(isset($_GET['numero-commande'])){
-                $numero = $_GET['numero-commande'];
-                view($numero);
+            if(isset($_GET['id'])){
+                $id = $_GET['id'];
+                view($id);
             }else{
                 throw new Exception('Cette commandne n\'existe pas');
             }
         }else if($_GET['action']=='delete'){ 
-            if(isset($_GET['numero-commande'])){
-                $numero = $_GET['numero-commande'];
-                delete($numero);
+            if(isset($_GET['id'])){
+                $id = $_GET['id'];
+                delete($id);
             }else{
                 throw new Exception('Cette commandne n\'existe pas');
             }
-        }else if($_GET['action']=='confirm'){ 
-            if(isset($_GET['numero-commande'])){
-                $numero = $_GET['numero-commande'];
-                confirm($numero);
+        }else if($_GET['action']=='add'){ 
+                add();
+        }else if($_GET['action']=='modify'){ 
+            if(isset($_GET['id'])){
+                $id = $_GET['id'];
+                modify($id);
             }else{
                 throw new Exception('Cette commandne n\'existe pas');
             }
@@ -33,7 +35,7 @@ try{
             throw new Exception('Cette page n\'existe pas');
         }
     }else{
-        orders();
+        products();
     }
 }catch(Exception $e){
         echo $e->getMessage();

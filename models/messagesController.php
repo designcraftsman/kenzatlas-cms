@@ -1,25 +1,55 @@
 <?php 
 
-    function getMessages(){
-    try {
-    	$database = new PDO('mysql:host=localhost;dbname=kenzltry_kenzatlas;charset=utf8', 'kenzltry_mariamFayz', 'kenzatlas2024');
-	} catch(Exception $e) {
-    	die('Erreur : '.$e->getMessage());
+	require_once '../../lib/database.php';
+	class Message{
+		public int $id;
+		public string $utulisateur;
+		public string $email;
+		public string $message;
+		public string $date;
 	}
-    $statement = $database->query(
-    	"SELECT * FROM messages  ORDER BY idMessage DESC"
-	);
-	$messages = [];
-	while (($row = $statement->fetch())) {
-    	$message = [
-            'id'=> $row['idMessage'],
-        	'utulisateur' => $row['nomCompletUtulisateur'],
-        	'email' => $row['emailUtulisateur'],
-        	'message' => $row['messageUtulisateur'],
-            'date'=>$row['dateMessage'],
-    	];
 
-    	$messages[] = $message;
+	class MessageRepository{
+		public DatabaseConnection $connection;
+		public function getMessages():array{
+			$statement = $this->connection->getConnection()->query(
+				"SELECT * FROM messages  ORDER BY idMessage DESC"
+			);
+			$messages = [];
+			while (($row = $statement->fetch())) {
+				$message  = new Message();
+				$message->id =  $row['idMessage'];
+				$message->utulisateur = $row['nomCompletUtulisateur'];
+				$message->email = $row['emailUtulisateur'];
+				$message->message = $row['messageUtulisateur'];
+				$message->date =$row['dateMessage'];
+				$messages[] = $message;
+			}
+			return $messages;
+			}
+
+			public function getMessage($id):Message{
+				$statement = $this->connection->getConnection()->query(
+					"SELECT * FROM messages  WHERE idMessage = $id"
+				);
+				$row = $statement->fetch();
+				$message  = new Message();
+				$message->id =  $row['idMessage'];
+				$message->utulisateur = $row['nomCompletUtulisateur'];
+				$message->email = $row['emailUtulisateur'];
+				$message->message = $row['messageUtulisateur'];
+				$message->date =$row['dateMessage'];
+				return $message;
+			}
+
+			public function deleteMessage($id){
+				$statement = $this->connection->getConnection()->prepare(
+					"DELETE FROM messages WHERE idMessage = :id"
+				);
+				$statement->execute([
+					':id' => $id
+				]);
+				header('Location: ../messages/index.php');
+			}	
 	}
-    return $messages;
-    }
+    

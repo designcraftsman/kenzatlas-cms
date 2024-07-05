@@ -1,11 +1,12 @@
 <?php 
 
 require_once('../../models/usersController.php');
-function users(){
+function userOrders($id){
     $UserRepository = new UserRepository();
     $UserRepository->connection = new DatabaseConnection();
-    $utulisateurs =  $UserRepository->getUsers();
+    $utulisateur = $UserRepository->getUser($id);
     $OrderRepository = new OrderRepository();
     $OrderRepository->connection = new DatabaseConnection();
-    require ('../../views/users/users.php');
+    $commandes = $OrderRepository->getUserOrders($id);
+    require_once('../../views/users/userOrders.php');
 }

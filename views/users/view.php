@@ -16,30 +16,30 @@
         <h1 class="fw-bolder fs-2 mb-5 text-decoration-underline">Info utulisateur :</h1>
             <div class=" fs-5 row m-auto  border border-primary p-2 rounded   mb-3">
                 <div class="fw-bold text-decoration-underline col-4">ID utulisateur: </div>
-                <div class="col-7 text-end">55</div>
+                <div class="col-7 text-end"><?= htmlspecialchars($utulisateur->id); ?></div>
             </div>
             <div class=" fs-5 row m-auto border  border-primary p-2 rounded mb-3">
                 <div class="fw-bold text-decoration-underline col-4">Nom: </div>
-                <div class="col-7 text-end">Saad </div>
+                <div class="col-7 text-end"><?= htmlspecialchars($utulisateur->nom); ?> </div>
             </div>
             <div class="fs-5 row m-auto m-auto border border-primary rounded p-2 mb-3">
                 <div class=" text-decoration-underline fw-bold col-4">Prénom: </div>
-                <div class="col-7 text-end">Smayka  </div>
+                <div class="col-7 text-end"><?= htmlspecialchars($utulisateur->prenom); ?>  </div>
             </div>
             <div class="fs-5 row m-auto  border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Age: </div>
-                <div class="col-7 text-end"> 30 </div>
+                <div class="col-7 text-end"> <?= htmlspecialchars($utulisateur->dateNaissance); ?> </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Téléphone: </div>
                 <div class="col-7 text-end">
-                0652876002
+                <?= htmlspecialchars($utulisateur->telephone); ?>
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Commande(s) effectuée(s): </div>
                 <div class="col-7 text-end">
-                5 <span class="ms-3"><a href="#" ><i class="fa-solid fa-circle-info text-dark"></i></a></span>
+                <?php echo($OrderRepository->getOrdersNumber($utulisateur->id)) ?> <span class="ms-3"><a href="index.php?action=userOrders&id=<?= htmlspecialchars($utulisateur->id) ?>" ><i class="fa-solid fa-circle-info text-dark"></i></a></span>
                 </div>
             </div> 
             <div >
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <a href="delete.php" type="button" class="btn btn-danger">Supprimer</a>
+                                    <a href="index.php?action=delete&id=<?= htmlspecialchars($utulisateur->id); ?>" type="button" class="btn btn-danger">Supprimer</a>
                                 </div>
                                 </div>
                  </div>

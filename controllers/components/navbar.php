@@ -11,7 +11,7 @@
           </a>
           <div class="d-flex me-lg-4">
               <a type="button"  data-bs-toggle="collapse" href="#userCollapse" role="button" aria-expanded="false" aria-controls="collapseExample" class="user">
-                <img src="../../assets/img/logo/review3.jpg" class="w-100 rounded-circle   user__icon" alt="">
+                <img src="<?= htmlspecialchars($_SESSION['image']) ?>" class=" rounded-circle   user__icon" alt="">
               </a>
               <div class="collapse" id="userCollapse">
               <div class="card card-body p-0">
@@ -19,7 +19,7 @@
                 <hr class="m-1">
                 <nav class="p-0">
                     <ul class="list-unstyled m-0 p-0">
-                      <li  class=" border-dark m-0 p-0 rounded-top "><a class="text-decoration-none text-dark d-block p-3" href="../user/manage.php"><i class="fa-solid fa-user"></i> Gérer votre compte</a></li>
+                      <li  class=" border-dark m-0 p-0 rounded-top "><a class="text-decoration-none text-dark d-block p-3" href="../user/index.php"><i class="fa-solid fa-user"></i> Gérer votre compte</a></li>
                       <hr class="m-1">
                       <li class="  m-0 p-0 rounded-bottom"><a class="text-decoration-none text-dark d-block p-3 " href="../.."><i class="fa-solid fa-right-from-bracket"></i> Se déconnecter</a></li>
                     </ul>
@@ -42,10 +42,10 @@
         <ul class="list-unstyled text-center p-0">
           <li class="link  p-0 "><a href="../dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
           <li class="link p-0 "><a href="../orders/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-users"></i> Commandes</a></li>
-          <li class="link  p-0 "><a href="../users/users.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-calendar"></i> Utulisateurs</a></li>
-          <li class="link  p-0 "><a href="../products/products.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-money-bill-transfer"></i> Produits</a></li>
+          <li class="link  p-0 "><a href="../users/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-calendar"></i> Utulisateurs</a></li>
+          <li class="link  p-0 "><a href="../products/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-money-bill-transfer"></i> Produits</a></li>
           <li class="link  p-0 "><a href="../articles/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-rectangle-list"></i> Articles</a></li>
-          <li class="link  p-0 "><a href="../messages/messages.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-flag"></i> Messages</a></li>
+          <li class="link  p-0 "><a href="../messages/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-flag"></i> Messages</a></li>
         </ul>
     </nav>
   </div>

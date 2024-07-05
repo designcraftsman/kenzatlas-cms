@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +21,9 @@
           <a class="navbar-brand" href="dashboard.php" class="">
             <img src="../../assets/img/logo/svg_white.svg" width="150" >
           </a>
-          <div class="d-flex me-lg-4">
+          <div class="d-flex me-lg-4 ">
               <a type="button"  data-bs-toggle="collapse" href="#userCollapse" role="button" aria-expanded="false" aria-controls="collapseExample" class="user">
-                <img src="../assets/img/logo/review3.jpg" class="w-100 rounded-circle   user__icon" alt="">
+                <img src="articles/<?= htmlspecialchars($_SESSION['image']) ?>" class=" rounded-circle   user__icon" alt="">
               </a>
               <div class="collapse" id="userCollapse">
               <div class="card card-body p-0">
@@ -30,7 +31,7 @@
                 <hr class="m-1">
                 <nav class="p-0">
                     <ul class="list-unstyled m-0 p-0">
-                      <li  class=" border-dark m-0 p-0 rounded-top "><a class="text-decoration-none text-dark d-block p-3" href="user/manage.php"><i class="fa-solid fa-user"></i> Gérer votre compte</a></li>
+                      <li  class=" border-dark m-0 p-0 rounded-top "><a class="text-decoration-none text-dark d-block p-3" href="user/index.php"><i class="fa-solid fa-user"></i> Gérer votre compte</a></li>
                       <hr class="m-1">
                       <li class="  m-0 p-0 rounded-bottom"><a class="text-decoration-none text-dark d-block p-3 " href=".."><i class="fa-solid fa-right-from-bracket"></i> Se déconnecter</a></li>
                     </ul>
@@ -56,10 +57,10 @@
         <ul class="list-unstyled text-center p-0">
           <li class="link  p-0 "><a href="dashboard.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
           <li class="link p-0 "><a href="orders/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-users"></i> Membres</a></li>
-          <li class="link  p-0 "><a href="users/users.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-calendar"></i> Evénements</a></li>
-          <li class="link  p-0 "><a href="products/products.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-money-bill-transfer"></i> Transactions</a></li>
+          <li class="link  p-0 "><a href="users/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-calendar"></i> Evénements</a></li>
+          <li class="link  p-0 "><a href="products/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-money-bill-transfer"></i> Transactions</a></li>
           <li class="link  p-0 "><a href="articles/articles.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-rectangle-list"></i> Séances d'entrainements</a></li>
-          <li class="link  p-0 "><a href="messages/messages.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-flag"></i> Rapports</a></li>
+          <li class="link  p-0 "><a href="messages/index.php" class="fs-5 text-dark fw-light text-decoration-none border d-block p-3"><i class="fa-solid fa-flag"></i> Rapports</a></li>
         </ul>
     </nav>
   </div>
@@ -72,11 +73,11 @@
         <nav class="col-2 bg-secondary d-lg-flex flex-column asideNavbar  p-0 d-none   ">
             <ul class="list-unstyled d-flex flex-column   p-0 pt-5 asideNavbarAnimation">
               <li class="link mb-3 "><a href="dashboard.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-house"></i> Tableau de bord</a></li>
-              <li class="link mb-3 "><a href="orders/index.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-users"></i> Commandes</a></li>
-              <li class="link mb-3  "><a href="users/users.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-calendar"></i> Utulisateurs</a></li>
-              <li class="link mb-3 "><a href="products/products.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5"><i class="fa-solid fa-money-bill-transfer"></i> Produits</a></li>
-              <li class="link mb-3 "><a href="articles/index.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5"><i class="fa-solid fa-rectangle-list"></i> Articles</a></li>
-              <li class="link mb-3"><a href="messages/messages.php" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-flag"></i> Messages</a></li>
+              <li class="link mb-3 "><a href="orders" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-users"></i> Commandes</a></li>
+              <li class="link mb-3  "><a href="users" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-calendar"></i> Utulisateurs</a></li>
+              <li class="link mb-3 "><a href="products" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5"><i class="fa-solid fa-money-bill-transfer"></i> Produits</a></li>
+              <li class="link mb-3 "><a href="articles" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5"><i class="fa-solid fa-rectangle-list"></i> Articles</a></li>
+              <li class="link mb-3"><a href="messages" class="fs-5 text-dark  text-decoration-none asideNavLinks  d-inline-block ps-4  p-2 w-100 rounded-end-5 "><i class="fa-solid fa-flag"></i> Messages</a></li>
             </ul>
         </nav>
           <main class="col-lg-9 col-12 m-auto   mt-5 ">
@@ -85,15 +86,15 @@
             <div class="row mt-4   p-2  componentsAnimation">
               <div class="col-lg-3 col-md-5 col-12 bg-secondary d-flex flex-column justify-content-between    p-3 text-center rounded-4 mt-lg-0 m-auto mb-3">
                 <h3 class="fs-5 fw-normal  "><span class="tounrnamentsIcon"><i class="fa-solid fa-trophy"></i></span> Nouveaux Utulisateurs</h3>
-                <h4 class="fs-5 fw-bold ">14</h4>
+                <h4 class="fs-5 fw-bold "><?= htmlspecialchars($recentUsers) ?></h4>
               </div>
               <div class="col-lg-3 col-md-5 col-12  bg-secondary  d-flex flex-column justify-content-between    p-3 text-center rounded-4 mt-lg-0 m-auto mb-3">
                 <h3 class="fs-5 fw-normal  "><span class="tounrnamentsIcon"><i class="fa-solid fa-calendar"></i></span> Commandes Confirmées</h3>
-                <h4 class="fs-5 fw-bolder ">33</h4>
+                <h4 class="fs-5 fw-bolder "><?= htmlspecialchars($confirmedOrders) ?></h4>
               </div>
               <div class="col-lg-3 col-md-5 col-12  bg-secondary d-flex flex-column justify-content-between   p-3 text-center rounded-4 mt-lg-0 m-auto mb-3">
                 <h3 class="fs-5 fw-normal   "><span class="tounrnamentsIcon"><i class="fa-solid fa-money-bill-transfer"></i></span> Commandes Non Confirmées</h3>
-                <h4 class="fs-4 fw-bold ">20</h4>
+                <h4 class="fs-4 fw-bold "><?= htmlspecialchars($unconfirmedOrders) ?></h4>
               </div>
             </div>
             <h2 class="text-dark fs-4 fw-bold mt-4 secondHeadersAnimation">Nouveaux abonnés</h2>
@@ -110,24 +111,15 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <?php foreach($utulisateurs as $utulisateur){ ?>
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto@gmail.com</td>
-                      <td>06973655</td>
+                      <th scope="row"><?= htmlspecialchars($utulisateur->id) ?></th>
+                      <td><?= htmlspecialchars($utulisateur->nom) ?> <?= htmlspecialchars($utulisateur->prenom) ?></td>
+                      <td><?= htmlspecialchars($utulisateur->email) ?></td>
+                      <td><?= htmlspecialchars($utulisateur->telephone) ?></td>
                     </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton@gmail.com</td>
-                      <td>0788996632</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry the Bird</td>
-                      <td>larry@gmail.com</td>
-                      <td>89665577</td>
-                    </tr>
+                    <?php } ?>
+                   
                   </tbody>
                 </table>
 </div>

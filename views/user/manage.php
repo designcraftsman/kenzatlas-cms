@@ -17,7 +17,7 @@
             <h1 class="fs-1 fw-bold text-center"> Gérer votre compte</h1>
             <div class="row mt-5 m-auto">
                 <div class="col-lg-5 col-md-5 col-12 border rounded m-auto  mb-3 ">
-                    <a href="personnelinfo.php" class="text-decoration-none d-flex p-3 align-items-center justify-content-between text-dark ">
+                    <a href="index.php?action=personnelinfo" class="text-decoration-none d-flex p-3 align-items-center justify-content-between text-dark ">
                         <div class="text-start d-flex justify-content-between  align-items-center">
                             <span ><i class="fa-solid fa-user fa-xl"></i></span> 
                             <div class="ms-3">
@@ -26,10 +26,10 @@
                             </div>
                         </div>
                         <span ><i class="fa-solid fa-chevron-right"></i></span>
-                        </a>
+                    </a>
                 </div>
                 <div class="col-lg-5 col-md-5 col-12 border rounded mb-3 ">
-                <a href="password.php" class="text-decoration-none d-flex p-3 align-items-center justify-content-between text-dark ">
+                <a href="index.php?action=password" class="text-decoration-none d-flex p-3 align-items-center justify-content-between text-dark ">
                         <div class="text-start d-flex justify-content-between  align-items-center">
                             <span ><i class="fa-solid fa-lock fa-xl"></i></span> 
                             <div class="ms-3">

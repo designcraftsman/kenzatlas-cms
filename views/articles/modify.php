@@ -46,9 +46,9 @@
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Voulez vous effectuer cette modification ?</h5>
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer ">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <button type="submit"   class="btn btn-primary">Enregistrer</>
+                                    <button type="submit"   class="btn btn-primary text-white fw-bold ">Enregistrer</>
                                 </div>
                                 </div>
                  </div>

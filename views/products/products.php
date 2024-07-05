@@ -19,23 +19,23 @@
                 <table class="table table-primary   ">
                   <thead>
                     <tr  >
-                      <th scope="col" class="col-2"></th>
-                      <th scope="col" class="col-2">Id produit</th>
+                      <th scope="col" class="col-1"></th>
+                      <th scope="col" class="col-1">Id produit</th>
                       <th scope="col" class="col-2">Nom du produit</th>
                       <th scope="col" class="col-2">Prix du produit</th>
                       
                       <th class="col-2">
-                        <a href="add.php" class="btn btn-primary w-100 text-white fw-bold">Ajouter un produit</a>
+                        <a href="index.php?action=add" class="btn btn-primary w-100 text-white fw-bold">Ajouter un produit</a>
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php foreach ($produits as $produit){ ?>
                     <tr class="align-items-center">
-                      <td><img src="../../<?= htmlspecialchars($produit['image']); ?>" class="w-25"></td>
-                      <td scope="row"><?= htmlspecialchars($produit['id']); ?></td>
-                      <td><?= htmlspecialchars($produit['nom']); ?></td>
-                      <td><?= htmlspecialchars($produit['prix']); ?></td>
+                      <td><img src="../../<?= htmlspecialchars($produit->image); ?>" class="w-25"></td>
+                      <td scope="row"><?= htmlspecialchars($produit->id); ?></td>
+                      <td><?= htmlspecialchars($produit->nom); ?></td>
+                      <td><?= htmlspecialchars($produit->prix); ?> dh</td>
                      
                       <td>
                         <div class="dropdown col-2 ">
@@ -44,9 +44,8 @@
                           </a>
                         
                           <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item border p-2 " href="view.php"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
-                            <li><a class="dropdown-item border p-2 " href="modify.php"><i class="fa-solid fa-pen"></i> Modifier</a></li>
-                            <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                            <li><a class="dropdown-item border p-2 " href="index.php?action=view&id=<?= htmlspecialchars($produit->id); ?>"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
+                            <li><a class="dropdown-item border p-2 " href="index.php?action=modify&id=<?= htmlspecialchars($produit->id); ?>"><i class="fa-solid fa-pen"></i> Modifier</a></li>
                           </ul>
                         </div>
                       </td>
@@ -61,20 +60,6 @@
                 ?>
         </div>
         </main>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Voulez vous vraiment supprimez cette transaction ?</h5>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <a href="delete.php" type="button" class="btn btn-danger">Supprimer</a>
-                                </div>
-                                </div>
-                 </div>
-            </div>
     </div>
 </div>
 </body>

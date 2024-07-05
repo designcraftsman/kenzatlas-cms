@@ -36,24 +36,10 @@
                         
                           <ul class="dropdown-menu text-center p-0" aria-labelledby="dropdownMenuLink">
                             <li><a class="dropdown-item border p-2 " href="index.php?action=view&numero-commande=<?= htmlspecialchars($commande->numero); ?>"><i class="fa-solid fa-circle-info"></i> Consulter</a></li>
-                            <li><a type="button" class="dropdown-item border p-2"data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash"></i> Supprimer</a></li>
                           </ul>
                         </div>
                       </td>
                     </tr>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Voulez vous vraiment supprimez cette commande ?</h5>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <a href="index.php?action=delete&numero-commande=<?= htmlspecialchars($commande->numero); ?>" type="button" class="btn btn-danger">Supprimer</a>
-                                </div>
-                                </div>
-                 </div>
-            </div>
                     <?php }?>
                     
                   </tbody>

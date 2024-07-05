@@ -13,27 +13,27 @@
         <div class="row m-0 p-0">
         <?php include_once "../components/asidenav.php";?>
         <main class="col-lg-9 col-12 m-auto   mt-5 ">
-        <form class="p-3 ">
+        <form class="p-3 " method="POST" enctype="multipart/form-data">
             <div class="row mb-3">
                 <div class="col">
                     <label for="lieu" class="mb-3">Nom du produit</label>
-                    <input type="text" name="lieu" class="form-control" >
+                    <input type="text" name="nomProduit" class="form-control" >
                 </div>
                 <div class="col">
                     <label for="sport" class="mb-3">Catégorie</label>
-                <select class="form-select m-0" aria-label="sport">
-                    <option selected value="0">cheveux</option>
-                    <option value="1">gommage</option>
-                    <option value="2">huile</option>
-                    <option value="3">savon</option>
+                <select class="form-select m-0" name="categorieProduit" aria-label="sport">
+                    <option selected value="cheveux">cheveux</option>
+                    <option value="gommage">gommage</option>
+                    <option value="huile">huile</option>
+                    <option value="savon">savon</option>
 
                 </select>  
                 </div>
                 <div class="col">
                 <label for="sport" class="mb-3">Pack promo</label>
-                <select class="form-select m-0" aria-label="sport">
-                    <option selected value="0">Non</option>
-                    <option value="1">Oui</option>
+                <select class="form-select m-0" name="etatProduit" aria-label="sport">
+                    <option selected value="unique">Non</option>
+                    <option value="pack promo">Oui</option>
                 </select> 
                 </div>
                 
@@ -41,24 +41,28 @@
             <div class="row mb-3">
             <div class="col mb-3">
                     <label for="amount" class="mb-3">Premiére image</label>
-                    <input type="file" name="amount" class="form-control" aria-label="Dirham amount">
+                    <input type="file" name="imageProduit" class="form-control" aria-label="Dirham amount">
             </div>
             <div class="col mb-3">
                 <label for="amount" class="mb-3">Deuxiéme image (optionnel)</label>
-                 <input type="file" name="amount" class="form-control" aria-label="Dirham amount">
+                 <input type="file" name="imageProduit2" class="form-control" aria-label="Dirham amount">
             </div>
             </div>
             <div class="col mb-3">
                 <label for="amount" class="mb-3">Sous titre du produit</label>
-                 <input type="text" name="amount" class="form-control" aria-label="Dirham amount">
+                 <input type="text" name="sousTitreProduit" class="form-control" aria-label="Dirham amount">
+            </div>
+            <div class="col mb-3">
+                <label for="amount" class="mb-3">Prix</label>
+                 <input type="text" name="prixProduit" class="form-control" aria-label="Dirham amount">
             </div>
             <div class="col mb-3">
                 <label for="amount" class="mb-3">Ingrédients</label>
-                 <input type="text" name="amount" class="form-control" aria-label="Dirham amount">
+                 <input type="text" name="ingredientsProduit" class="form-control" aria-label="Dirham amount">
             </div>
             <div class="col mb-3">
                 <label for="description" class="mb-3">Description</label>
-                 <textarea name="description" class="w-100" rows="5" ></textarea>
+                 <textarea name="descriptionProduit" class="w-100" rows="5" ></textarea>
             </div>
         
             <button type="submit" class=" btn btn-primary  text-white fw-bold">Ajouter un nouveau produit</button>

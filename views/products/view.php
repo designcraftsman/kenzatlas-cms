@@ -16,49 +16,47 @@
         <h1 class="fw-bolder fs-2 mb-5 text-decoration-underline">Info produit :</h1>
             <div class=" fs-5 row m-auto  border border-primary p-2 rounded   mb-3">
                 <div class="fw-bold text-decoration-underline col-4">ID produit: </div>
-                <div class="col-7 text-end">55</div>
+                <div class="col-7 text-end"><?= htmlspecialchars($produit->id); ?></div>
             </div>
             <div class=" fs-5 row m-auto border  border-primary p-2 rounded mb-3">
                 <div class="fw-bold text-decoration-underline col-4">Nom du produit: </div>
-                <div class="col-7 text-end">Huile Précieuse </div>
+                <div class="col-7 text-end"><?= htmlspecialchars($produit->nom); ?></div>
             </div>
             <div class="fs-5 row m-auto m-auto border border-primary rounded p-2 mb-3">
                 <div class=" text-decoration-underline fw-bold col-4">Sous titre du produit: </div>
-                <div class="col-7 text-end">Baume a lèvres a base de beurre de karité et akar fassi </div>
+                <div class="col-7 text-end"><?= htmlspecialchars($produit->sousTitre); ?></div>
             </div>
             <div class="fs-5 row m-auto  border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Description: </div>
-                <div class="col-7 text-end"> Aucune</div>
+                <div class="col-7 text-end"> <?= htmlspecialchars($produit->description); ?></div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Ingrédients: </div>
                 <div class="col-7 text-end">
-                Huile de coco
-Beurre de karité
-Akar fassi              
+                <?= htmlspecialchars($produit->ingredients); ?>          
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Catégorie Produit: </div>
                 <div class="col-7 text-end">
-                    Cheveux       
+                <?= htmlspecialchars($produit->categorie); ?>   
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
-                <div class=" col-4 text-decoration-underline fw-bold">Pack promo: </div>
+                <div class=" col-4 text-decoration-underline fw-bold">Type: </div>
                 <div class="col-7 text-end">
-               Oui        
+                <?= htmlspecialchars($produit->etat); ?>        
                 </div>
             </div> 
             <div class="fs-5 row m-auto border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Prix du produit: </div>
                 <div class="col-7 text-end">
-                59.00 DH      
+                <?= htmlspecialchars($produit->prix); ?> DH      
                 </div>
             </div> 
            
             <div >
-            <a href="modify.php" class="   btn btn-primary text-white  fw-bold mt-2 " ><i class="fa-solid fa-trash"></i> Modifier les infos</a>
+            <a href="index.php?action=modify&id=<?= htmlspecialchars($produit->id); ?>" class="   btn btn-primary text-white  fw-bold mt-2 " ><i class="fa-solid fa-trash"></i> Modifier les infos</a>
             <a type="button" class="   btn btn-danger  fw-bold mt-2 ms-2 "data-bs-toggle="modal" data-bs-target="#deleteModal" ><i class="fa-solid fa-trash"></i> Supprimer le produit</a>
             </div>
         </main>
@@ -70,7 +68,7 @@ Akar fassi
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <a href="delete.php" type="button" class="btn btn-danger">Supprimer</a>
+                                    <a href="index.php?action=delete&id=<?= htmlspecialchars($produit->id); ?>" type="button" class="btn btn-danger">Supprimer</a>
                                 </div>
                                 </div>
                  </div>

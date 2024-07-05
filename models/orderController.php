@@ -1,5 +1,4 @@
 <?php 
-	require_once'../../lib/database.php';
 	class Order{
 		public int $numero;
 		public string $nomClient;
@@ -83,7 +82,67 @@
 			return $produitscommandés;	
 				
 		}
-	
+
+		public function getConfirmedOrders():int{
+			$statement = $this->connection->getConnection()->query(
+				"SELECT COUNT(*) FROM commandes WHERE statutCommande = 'confirmé'"
+			);
+			$row = $statement->fetch();
+			return $row[0];
+		}
+
+		public function getunconfirmedOrders():int{
+			$statement = $this->connection->getConnection()->query(
+				"SELECT COUNT(*) FROM commandes WHERE statutCommande = 'non confirmé'"
+			);
+			$row = $statement->fetch();
+			return $row[0];
+		}
+		
+		public function getOrdersNumber(int $id): int {
+			// Prepare the statement to prevent SQL injection
+			$statement = $this->connection->getConnection()->prepare(
+				"SELECT COUNT(*) FROM commandes WHERE idUtulisateur = :id"
+			);
+			
+			// Bind the parameter
+			$statement->bindParam(':id', $id, PDO::PARAM_INT);
+			
+			// Execute the statement
+			$statement->execute();
+			
+			// Fetch the result
+			$row = $statement->fetch(PDO::FETCH_NUM);
+			
+			// Return the count of rows
+			return (int)$row[0];
+		}
+
+		public function getUserOrders(int $id): array {
+			// Prepare the statement to prevent SQL injection
+			$statement = $this->connection->getConnection()->prepare(
+				"SELECT * FROM commandes WHERE idUtulisateur = :id ORDER BY numeroCommande DESC"
+			);
+
+			// Bind the parameter
+			$statement->bindParam(':id', $id, PDO::PARAM_INT);
+
+			// Execute the statement
+			$statement->execute();
+
+			// Fetch the result
+			$orders = [];
+			while ($row = $statement->fetch()) {
+				$order = new Order();
+				$order->numero = $row['numeroCommande'];
+				$order->prix = $row['totalCommande'];
+				$order->date = $row['dateCommande'];
+				$order->statut = $row['statutCommande'];
+				$orders[] = $order;
+			}
+			return $orders;
+		}
+		
 		public function deleteOrder($numero){
 					$statement = $this->connection->getConnection()->prepare(
 						"DELETE FROM commandes WHERE numeroCommande = :numero"
@@ -99,7 +158,15 @@
 					]);
 					
 		}
-		
+
+		public function confirmOrder($numero){
+					$statement = $this->connection->getConnection()->prepare(
+						"UPDATE commandes SET statutCommande = 'confirmé' WHERE numeroCommande = :numero"
+					);
+					$statement->execute([
+						':numero' => $numero
+					]);
+		}
 	}
 
 

@@ -14,25 +14,25 @@
         <div class="row m-0 p-0 ">
         <?php include "../components/asidenav.php"; ?>
           <main class="col-lg-9 col-12 m-auto    mt-5">
-                <form class=" m-auto ">
+                <form class=" m-auto " method="POST">
                   <h2 class="fw-semibold fs-5 text-center"> Changer votre mot de passe</h2>
                     <hr class="m-4">
                     <div class="row mb-4">
                         <div class="col">
                             <label for="lieu" class="mb-3">Ancien mot de passe</label>
-                            <input type="password" name="lieu" class="form-control" value="fayz">
+                            <input type="password" name="oldPassword" class="form-control" >
                         </div>
                         <div class="col">
                             <label for="sport" class="mb-3">Nouveau mot de passe</label>
-                            <input type="password" name="lieu" class="form-control"value="oussama" > 
+                            <input type="password" name="newPassword" class="form-control" > 
                         </div>
                         <div class="col">
                             <label for="lieu" class="mb-3">Confirmer le nouveau mot de passe</label>
-                            <input type="password" name="lieu" class="form-control"  >
+                            <input type="password" name="confirmedPassword" class="form-control"  >
                         </div>
                     </div>
                     
-                    <button type="submit" class=" btn btn-success  fw-bold">Enregistrer</button>
+                    <button type="submit" class=" btn btn-primary  text-white fw-bold">Enregistrer</button>
                 </form>
            
           </main>

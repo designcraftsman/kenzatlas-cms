@@ -1,7 +1,7 @@
 <?php 
 
+require_once('../../models/articlesController.php');
 
-require_once ('../../models/articlesController.php') ;
 function view($id){
     $ArticleRepository = new ArticleRepository();
     $ArticleRepository->connection = new DatabaseConnection();

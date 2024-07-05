@@ -20,19 +20,19 @@
         
                 <div class=" fs-5 row m-auto  border border-primary p-2 rounded   mb-3">
                     <div class="fw-bold text-decoration-underline col-4">ID message: </div>
-                    <div class="col-7 text-start">55</div>
+                    <div class="col-7 text-start"><?= htmlspecialchars($message->id); ?></div>
                 </div>
                 <div class=" fs-5 row m-auto border  border-primary p-2 rounded mb-3">
                     <div class="fw-bold text-decoration-underline col-4">Nom complet: </div>
-                    <div class="col-7 text-start">Oussama Fayz  </div>
+                    <div class="col-7 text-start"><?= htmlspecialchars($message->utulisateur); ?></div>
                 </div>
                 <div class="fs-5 row m-auto m-auto border border-primary rounded p-2 mb-3">
                     <div class=" text-decoration-underline fw-bold col-4">Email: </div>
-                    <div class="col-7 text-start">fzoussama25@gmail.com</div>
+                    <div class="col-7 text-start"><?= htmlspecialchars($message->email); ?></div>
                 </div>
                 <div class="fs-5 row m-auto m-auto border border-primary rounded p-2 mb-3">
                     <div class=" text-decoration-underline fw-bold col-4">Date de publication: </div>
-                    <div class="col-7 text-start">21 février 2025</div>
+                    <div class="col-7 text-start"><?= htmlspecialchars($message->date); ?></div>
                 </div> 
                
                 </div>
@@ -40,30 +40,24 @@
                 
                 <div class="fs-5 row m-auto  border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Contenu: </div>
-                <div class="col-7 text-start"> Introduction
-                    L'Europe est à l'avant-garde de la transition énergétique mondiale, cherchant à réduire sa dépendance aux combustibles fossiles et à minimiser son empreinte carbone. Cette transformation est motivée par des objectifs climatiques ambitieux, des avancées technologiques et un engagement politique fort. Cet article explore les développements récents dans le domaine des énergies renouvelables en Europe, les défis rencontrés et les perspectives d'avenir.
-
-                    Une croissance impressionnante
-                    Au cours de la dernière décennie, la capacité installée en énergies renouvelables en Europe a connu une croissance spectaculaire. L'Union européenne (UE) a mis en place des politiques et des directives visant à promouvoir les sources d'énergie propres. En 2023, les énergies renouvelables représentaient plus de 40 % de la production totale d'électricité dans l'UE, avec une part croissante d'énergie éolienne, solaire et hydraulique.
-
-                    Les pays nordiques, en particulier, ont joué un rôle de pionniers. Le Danemark, par exemple, produit plus de 50 % de son électricité à partir de l'énergie éolienne. L'Allemagne, avec son initiative "Energiewende" (transition énergétique), a également fait des progrès significatifs en augmentant sa capacité solaire et éolienne tout en réduisant progressivement sa dépendance au charbon.</div>
-                    </div> 
+                <div class="col-7 text-start"> <?= htmlspecialchars($message->message); ?> </div> 
                     <div >
-                <a href="modify.php" class="   btn btn-primary text-white  fw-bold mt-2 " ><i class="fa-solid fa-trash"></i> Modifier l'article</a>
-                <a type="button" class="   btn btn-danger  fw-bold mt-2 ms-2 "data-bs-toggle="modal" data-bs-target="#deleteModal" ><i class="fa-solid fa-trash"></i> Supprimer l'article</a>
+               
                 </div>
+               
             
 </div>
+<a type="button" class="   btn btn-danger  fw-bold mt-2 ms-2 "data-bs-toggle="modal" data-bs-target="#deleteModal" ><i class="fa-solid fa-trash"></i> Supprimer le message</a>
         
         <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Voulez vous vraiment supprimez cet article ?</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Voulez vous vraiment supprimez ce message ?</h5>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <a href="delete.php" type="button" class="btn btn-danger">Supprimer</a>
+                                    <a href="index.php?action=delete&id=<?= htmlspecialchars($message->id); ?>" type="button" class="btn btn-danger fw-bold">Supprimer</a>
                                 </div>
                                 </div>
                  </div>
