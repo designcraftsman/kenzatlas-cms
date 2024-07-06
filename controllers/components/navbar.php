@@ -21,7 +21,7 @@
                     <ul class="list-unstyled m-0 p-0">
                       <li  class=" border-dark m-0 p-0 rounded-top "><a class="text-decoration-none text-dark d-block p-3" href="../user/index.php"><i class="fa-solid fa-user"></i> Gérer votre compte</a></li>
                       <hr class="m-1">
-                      <li class="  m-0 p-0 rounded-bottom"><a class="text-decoration-none text-dark d-block p-3 " href="../.."><i class="fa-solid fa-right-from-bracket"></i> Se déconnecter</a></li>
+                      <li class="  m-0 p-0 rounded-bottom"><a class="text-decoration-none text-dark d-block p-3 " href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i> Se déconnecter</a></li>
                     </ul>
                 </nav>
               </div>

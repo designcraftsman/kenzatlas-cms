@@ -120,6 +120,8 @@
 						'etatProduit' => $etatProduit,
 					]);
 				}
+				$_SESSION['success_message'] = 'Produit ajouté avec succès';
+				header('location: index.php');
 			}
 		}
 
@@ -223,7 +225,9 @@
 						'etatProduit' => $etatProduit,
 					]);
 				}
+				$_SESSION['success_message'] = 'Produit modifié avec succès';
 				header('Location: index.php');
+				
 			}
 		}
 
@@ -234,6 +238,7 @@
 			$deleteProduit->execute([
 				'idProduit' => $idProduit
 			]);
+			$_SESSION['success_message'] = 'Produit supprimé avec succès';
 			header('Location: index.php');
 		}
 	}

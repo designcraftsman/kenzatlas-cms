@@ -1,6 +1,9 @@
 <?php 
 
 session_start();
+if($_SESSION['login'] == false){
+    header('Location: ../../index.php');
+}else{
 require_once('messages.php');
 require_once('delete.php');
 require_once('view.php');
@@ -31,3 +34,4 @@ try{
         echo $e->getMessage();
 }
 
+}

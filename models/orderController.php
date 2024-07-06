@@ -156,7 +156,8 @@
 					$statement->execute([
 						':numero' => $numero
 					]);
-					
+					$_SESSION['error_message'] = 'Commande supprimée avec succès';
+
 		}
 
 		public function confirmOrder($numero){
@@ -166,6 +167,7 @@
 					$statement->execute([
 						':numero' => $numero
 					]);
+					$_SESSION['success_message'] = 'Commande confirmée avec succès';
 		}
 	}
 

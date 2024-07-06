@@ -1,5 +1,8 @@
 <?php 
 session_start();
+if($_SESSION['login'] == false){
+    header('Location: ../index.php');
+}else{
 require_once('articles.php');
 require_once('delete.php');
 require_once('view.php');
@@ -41,3 +44,4 @@ require_once('modify.php');
     }catch(Exception $e){
             echo $e->getMessage();
     }
+}

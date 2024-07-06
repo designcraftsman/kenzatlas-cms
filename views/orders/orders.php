@@ -7,6 +7,16 @@
         <main class="col-lg-9 col-12 m-auto   mt-0">
             <h1 class="fw-bold  fs-2  mt-4 mb-4 headersAnimation">Commandes</h1>
             <h2 class="fw-light  fs-4  mt-4 mb-5 headersAnimation">Liste des derniers commandes</h2>
+            <?php if(isset($_SESSION['success_message'])){ ?>
+              <div class="alert alert-success headersAnimation" role="alert"><?= htmlspecialchars($_SESSION['success_message']) ?></div>
+            <?php 
+              unset($_SESSION['success_message']);
+            } ?>
+            <?php if(isset($_SESSION['error_message'])){ ?>
+              <div class="alert alert-danger headersAnimation" role="alert"><?= htmlspecialchars($_SESSION['error_message']) ?></div>
+            <?php 
+              unset($_SESSION['error_message']);
+          } ?>
             <div class="table-responsive componentsAnimation">
                 <table class="table table-primary   ">
                   <thead>

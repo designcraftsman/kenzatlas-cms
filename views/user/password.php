@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +18,15 @@
                   <h2 class="fw-semibold fs-5 text-center"> Changer votre mot de passe</h2>
                     <hr class="m-4">
                     <div class="row mb-4">
-                        <div class="col">
+                        <div class="col-lg-4 col-12">
                             <label for="lieu" class="mb-3">Ancien mot de passe</label>
                             <input type="password" name="oldPassword" class="form-control" >
                         </div>
-                        <div class="col">
+                        <div class="col-lg-4 col-12">
                             <label for="sport" class="mb-3">Nouveau mot de passe</label>
                             <input type="password" name="newPassword" class="form-control" > 
                         </div>
-                        <div class="col">
+                        <div class="col-lg-4 col-12">
                             <label for="lieu" class="mb-3">Confirmer le nouveau mot de passe</label>
                             <input type="password" name="confirmedPassword" class="form-control"  >
                         </div>

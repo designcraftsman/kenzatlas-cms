@@ -62,6 +62,11 @@
         return false;
     }
 
+    public function logout(){
+        session_destroy();
+        header('location: ../index.php');
+    }
+
     public function changeInfo(){
         if (isset($_POST['email']) && isset($_POST['nom']) && isset($_POST['prenom'])) {
             $nom = $_POST['nom'];

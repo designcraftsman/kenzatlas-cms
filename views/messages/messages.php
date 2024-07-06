@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClubXtreme - Admin dashboard</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+<?php $title ="Messages";?>
+<?php ob_start();?>
 <?php include_once "../components/navbar.php";?>
       <div class="container-fluid m-0 p-0 ">
         <div class="row m-0 p-0">
@@ -15,6 +7,16 @@
         <main class="col-lg-9 col-12 m-auto   mt-0">       
         <h1 class="fw-bold  fs-2  mt-4 mb-4 headersAnimation">Messages</h1>
             <h2 class="fw-light  fs-4  mt-4 mb-5 headersAnimation">liste des messages reçus</h2>
+            <?php if(isset($_SESSION['success_message'])){ ?>
+              <div class="alert alert-success headersAnimation" role="alert"><?= htmlspecialchars($_SESSION['success_message']) ?></div>
+            <?php 
+              unset($_SESSION['success_message']);
+            } ?>
+            <?php if(isset($_SESSION['error_message'])){ ?>
+              <div class="alert alert-danger headersAnimation" role="alert"><?= htmlspecialchars($_SESSION['error_message']) ?></div>
+            <?php 
+              unset($_SESSION['error_message']);
+          } ?>
             <div class="table-responsive componentsAnimation">
                 <table class="table table-primary   ">
                   <thead>
@@ -63,7 +65,6 @@
       
         </main>
     </div>
-</div>
-</body>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-</html>
+    <?php $content = ob_get_clean(); ?>
+
+<?php require('../../views/layout.php') ?>

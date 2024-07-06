@@ -4,6 +4,7 @@ require_once('lib/database.php');
 require_once('models/userController.php');
 
 try {
+    $_SESSION['login']=false;
     $adminRepository = new AdminRepository();
     $adminRepository->connection = new DatabaseConnection();
     
@@ -32,6 +33,7 @@ try {
             $login = $adminRepository->login();
 
             if ($login) {
+                $_SESSION['login'] = true;
                 header('Location: controllers/dashboard.php');
                 exit();
             } else {

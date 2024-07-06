@@ -49,6 +49,7 @@
 				$statement->execute([
 					':id' => $id
 				]);
+				$_SESSION['error_message'] = 'Message supprimé avec succès';
 				header('Location: ../messages/index.php');
 			}	
 	}

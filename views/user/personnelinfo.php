@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
           <form class=" col-lg-9 col-12 m-auto" method="POST" enctype="multipart/form-data">
             <div  class="userInfo row     ">
                 <div class="col-lg-3 col-10 m-auto text-center mb-5">
-                    <img src="<?= htmlspecialchars($admin->image) ?>" class="object-fit-cover rounded-circle m-auto " >
+                    <img src="<?= htmlspecialchars($admin->image) ?>" class="object-fit-cover rounded-circle m-auto mb-3 " >
                     <input type="file" name="image" class="form-control">
                 </div>
             </div>

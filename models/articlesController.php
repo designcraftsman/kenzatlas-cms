@@ -61,21 +61,22 @@
 				$fileInfo = pathinfo($_FILES['imgArticle']['name']);
 				$extension = $fileInfo['extension'];
 				$allowedExtensions = ['jpg', 'jpeg', 'gif', 'png'];
-				if (in_array($extension, $allowedExtensions))
-							{
-								move_uploaded_file($_FILES['imgArticle']['tmp_name'], '../../../assets/img/articles/' . basename($_FILES['imgArticle']['name']));
-								$imgArticle = '../assets/img/articles/' . basename($_FILES['imgArticle']['name']);
-								$sqlQuery = 'INSERT INTO articles(imgArticle,titreArticle,categorieArticle,contenuArticle) VALUES (:imgArticle,:titreArticle,:categorieArticle,:contenuArticle)';
-								$insertPost = $this->connection->getConnection()->prepare($sqlQuery);
-								$insertPost->execute([
-									'imgArticle'=> $imgArticle,
-									'titreArticle'=> $titreArticle,
-									'categorieArticle'=>$categorieArticle,
-									'contenuArticle'=>$contenuArticle,
-								]);
-							}else{
-								echo('Erreur : L\'extension de l\'image n\'est pas autorisée');
-							}
+				if (in_array($extension, $allowedExtensions)){
+					move_uploaded_file($_FILES['imgArticle']['tmp_name'], '../../../assets/img/articles/' . basename($_FILES['imgArticle']['name']));
+					$imgArticle = '../assets/img/articles/' . basename($_FILES['imgArticle']['name']);
+					$sqlQuery = 'INSERT INTO articles(imgArticle,titreArticle,categorieArticle,contenuArticle) VALUES (:imgArticle,:titreArticle,:categorieArticle,:contenuArticle)';
+					$insertPost = $this->connection->getConnection()->prepare($sqlQuery);
+					$insertPost->execute([
+						'imgArticle'=> $imgArticle,
+						'titreArticle'=> $titreArticle,
+						'categorieArticle'=>$categorieArticle,
+						'contenuArticle'=>$contenuArticle,
+					]);
+					}else{
+						$_SESSION['error_message']='l\'extension de l\'image n\'est pas autorisée';
+					}
+					$_SESSION['success_message']='Article ajouté avec succès';
+					header('Location: index.php');	
 					}
 			}
 
@@ -85,6 +86,7 @@
 				$deleteArticle->execute([
 					':idArticle'=>$idArticle,
 				]);
+				$_SESSION['error_message']='Article supprimé avec succès';
 				header('Location: index.php');
 			}
 

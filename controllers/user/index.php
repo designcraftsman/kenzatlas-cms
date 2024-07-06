@@ -1,5 +1,8 @@
 <?php 
 session_start();
+if($_SESSION['login'] == false){
+    header('Location: ../../index.php');
+}else{
 require_once('../../lib/database.php');
 require_once('manage.php');
 require_once('password.php');
@@ -19,4 +22,5 @@ try{
     }
 }catch(Exception $e){
         echo $e->getMessage();
+}
 }

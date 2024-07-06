@@ -15,15 +15,13 @@
         <main class="col-lg-9 col-12 m-auto   mt-5 ">
         <form class="p-3 " method="POST"  enctype="multipart/form-data">
             <div class="row mb-5 align-items-center ">
-                <div class="col text-center ">
-                    <img src="../../../assets/img/produits/ghassoul.jpg" class="w-50 rounded-5 " alt="">
-                    <input type="file" name="imgArticle">
-                </div>
                 <div class="col">
-                    <label for="coach" class="mb-3">Titre d'article</label>
-                    <input type="text" name="titreArticle" class="form-control mb-3"  >
+                    <label for="coach" class="mb-3">Ajouter une image</label>
+                    <input required type="file" name="imgArticle" class="form-control mb-3">  
+                    <label  for="coach" class="mb-3">Titre d'article</label>
+                    <input required type="text" name="titreArticle" class="form-control mb-3"  >
                     <label for="sport" class="mb-3">Catégorie</label>
-                    <select class="form-select m-0" name="categorieArticle" aria-label="sport">
+                    <select required class="form-select m-0" name="categorieArticle" aria-label="sport">
                         <option selected value="beauté">Beauté</option>
                         <option value="corps">Corps</option>
                         <option value="cheveux">Cheveux</option>
@@ -34,7 +32,7 @@
             </div>
             <div class="col  mb-3">
                 <label for="contenu" class="mb-3">Contenu</label>
-                <textarea name="contenuArticle" class="w-100  form-control" rows="10" ></textarea>
+                <textarea required name="contenuArticle" class="w-100  form-control" rows="10" ></textarea>
             </div>
             <button type="submit" class="btn btn-primary  p-2 text-white fw-bold" ><i class="fa-solid fa-pen"></i> Ajouter l'article</button>
          </form>

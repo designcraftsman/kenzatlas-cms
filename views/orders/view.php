@@ -4,7 +4,7 @@
       <div class="container-fluid m-0 p-0 ">
         <div class="row m-0 p-0">
         <?php include_once "../components/asidenav.php";?>
-        <main class="col-lg-9 col-12     p-5   mt-0">
+        <main class="col-lg-9 col-12      p-3   mt-0">
             <h1 class="fw-bolder fs-2 mb-5 text-decoration-underline">Info commande :</h1>
             <div class=" fs-5 row m-auto  border border-primary p-2 rounded   mb-3">
                 <div class="fw-bold text-decoration-underline col-4">Numéro de commande: </div>

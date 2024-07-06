@@ -1,5 +1,8 @@
 <?php 
 session_start();
+if($_SESSION['login'] == false){
+    header('Location: ../../index.php');
+}else{
 require_once('products.php');
 require_once('add.php');
 require_once('modify.php');
@@ -39,4 +42,5 @@ try{
     }
 }catch(Exception $e){
         echo $e->getMessage();
+}
 }

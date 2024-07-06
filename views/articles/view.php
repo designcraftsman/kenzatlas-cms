@@ -42,13 +42,13 @@
                  </div>
                 <div class="fs-5 row m-auto  border border-primary rounded p-2 mb-3">
                 <div class=" col-4 text-decoration-underline fw-bold">Contenu: </div>
-                <div class="col-7 text-start"> <?= htmlspecialchars($article->contenu) ?> </div> 
-                    <div >
-                <a href="index.php?action=modify&id=<?= htmlspecialchars($article->id) ?>" class="   btn btn-primary text-white  fw-bold mt-2 " ><i class="fa-solid fa-trash"></i> Modifier l'article</a>
-                <a type="button" class="   btn btn-danger  fw-bold mt-2 ms-2 "data-bs-toggle="modal" data-bs-target="#deleteModal" ><i class="fa-solid fa-trash"></i> Supprimer l'article</a>
-                </div>
+                <div class="col-7 text-start"> <?= htmlspecialchars($article->contenu) ?> </div>
             
-</div>
+                </div>
+                <div>
+                        <a href="index.php?action=modify&id=<?= htmlspecialchars($article->id) ?>" class="   btn btn-primary text-white  fw-bold mt-2 " ><i class="fa-solid fa-trash"></i> Modifier l'article</a>
+                        <a type="button" class="   btn btn-danger  fw-bold mt-2 ms-2 "data-bs-toggle="modal" data-bs-target="#deleteModal" ><i class="fa-solid fa-trash"></i> Supprimer l'article</a>
+                    </div>
         
         <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
