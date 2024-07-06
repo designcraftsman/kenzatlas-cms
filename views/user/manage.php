@@ -14,8 +14,18 @@
         <div class="row m-0 p-0 ">
         <?php include_once '../components/asidenav.php';?>
           <main class="col-lg-9 col-12 m-auto    mt-5">
-            <h1 class="fs-1 fw-bold text-center"> Gérer votre compte</h1>
-            <div class="row mt-5 m-auto">
+            <h1 class="fs-1 fw-bold text-center headersAnimation"> Gérer votre compte</h1>
+            <?php if(isset($_SESSION['success_message'])){ ?>
+              <div class="alert alert-success headersAnimation" role="alert"><?= htmlspecialchars($_SESSION['success_message']) ?></div>
+            <?php 
+              unset($_SESSION['success_message']);
+            } ?>
+            <?php if(isset($_SESSION['error_message'])){ ?>
+              <div class="alert alert-danger headersAnimation" role="alert"><?= htmlspecialchars($_SESSION['error_message']) ?></div>
+            <?php 
+              unset($_SESSION['error_message']);
+          } ?>
+            <div class="row mt-5 m-auto headersAnimation">
                 <div class="col-lg-5 col-md-5 col-12 border rounded m-auto  mb-3 ">
                     <a href="index.php?action=personnelinfo" class="text-decoration-none d-flex p-3 align-items-center justify-content-between text-dark ">
                         <div class="text-start d-flex justify-content-between  align-items-center">

@@ -62,6 +62,7 @@
 			$deleteUser->execute([
 				'idUtulisateur' => $id
 			]);
+			$_SESSION['error_message'] = "L'utilisateur a été supprimé avec succès";
 			header('Location: index.php');
 		}
 	}

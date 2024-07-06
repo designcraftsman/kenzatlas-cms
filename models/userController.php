@@ -30,17 +30,26 @@
     
     public function changePassword(){
         if(isset($_POST['newPassword']) && isset($_POST['confirmedPassword']) && isset($_POST['oldPassword'])){
-            if($_POST['newPassword'] === $_POST['confirmedPassword']){
-                $statement = $this->connection->getConnection()->prepare(
-                    "UPDATE admin SET motdepasseAdmin = :newPassword "
-                );
-                $statement->bindParam(':newPassword', $_POST['newPassword']);
-                $statement->execute();
-                header('location: index.php');
+            $admin = $this->getAdmin();
+            if($_POST['oldPassword'] === $admin->motdepasse){
+                if($_POST['newPassword'] === $_POST['confirmedPassword']){
+                    $statement = $this->connection->getConnection()->prepare(
+                        "UPDATE admin SET motdepasseAdmin = :newPassword "
+                    );
+                    $statement->bindParam(':newPassword', $_POST['newPassword']);
+                    $statement->execute();
+                    $_SESSION['success_message'] = "Mot de passe modifié avec succès";
+                    header('location: index.php');
+                }
+                
+                else{
+                    $_SESSION['error_message'] = "Les mots de passe ne correspondent pas";
+                    header('location: index.php');
+                }
             }
-            
             else{
-                echo "Les mots de passe ne correspondent pas";
+                $_SESSION['error_message'] = "Mot de passe  incorrecte";
+                header('location: index.php');
             }
         }
     }
@@ -96,12 +105,14 @@
                     );
                     $statement->bindParam(':image', $image);
                     $statement->execute();
+                    unset($_SESSION['image']);
                     $_SESSION['image'] = $image;	
                 } else {
                     // Handle the error if the image upload fails
                     echo "Failed to upload the image.";
                 }
             }
+            $_SESSION['success_message'] = 'Vos informations ont été modifiées avec succès.';
             header('location: index.php');
         }
         
